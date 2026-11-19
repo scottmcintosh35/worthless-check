@@ -4,9 +4,9 @@ from ctypes import wintypes
 import os
 from pathlib import Path
 
-LABELS = {'troy': 'Office 1', 'enterprise': 'Office 2'}
-GROUPS = {'troy': 'PikeCountyWCUsers', 'enterprise': 'EnterpriseWCUsers'}
-DIRECTORIES = {'troy': 'Data', 'enterprise': 'EnterpriseData'}
+LABELS = {'office1': 'Office 1', 'enterprise': 'Office 2'}
+GROUPS = {'office1': 'PikeCountyWCUsers', 'enterprise': 'EnterpriseWCUsers'}
+DIRECTORIES = {'office1': 'Data', 'enterprise': 'EnterpriseData'}
 
 
 def data_path(division):
@@ -18,7 +18,7 @@ def database_division(db):
     path = Path(db.execute('PRAGMA database_list').fetchone()[2])
     if path.parent.name.casefold() == DIRECTORIES['enterprise'].casefold():
         return 'enterprise'
-    return 'troy'
+    return 'office1'
 
 
 def is_windows_admin():

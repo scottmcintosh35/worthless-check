@@ -2184,7 +2184,7 @@
       {
         "OBJTYPE": "5",
         "OBJCODE": "0",
-        "EXPR": "\"Attorney, 111 Williams Street,Troy, Alabama.\""
+        "EXPR": "\"Attorney, 111 Williams Street,[organization location], Alabama.\""
       },
       {
         "OBJTYPE": "5",
@@ -2334,7 +2334,7 @@
       {
         "OBJTYPE": "5",
         "OBJCODE": "0",
-        "EXPR": "\" Attorney's Office, P.O. Box 812  Troy, Alabama,36081.\""
+        "EXPR": "\" Attorney's Office, P.O. Box 812  [organization location], Alabama,36081.\""
       },
       {
         "OBJTYPE": "5",
@@ -2478,7 +2478,7 @@
       {
         "OBJTYPE": "5",
         "OBJCODE": "0",
-        "EXPR": "\"TROY, ALABAMA 36081\""
+        "EXPR": "\"[organization location], ALABAMA 36081\""
       },
       {
         "OBJTYPE": "5",
@@ -2827,7 +2827,7 @@
       {
         "OBJTYPE": "5",
         "OBJCODE": "0",
-        "EXPR": "\"Attorney, 111 Williams Street, Troy, Alabama.\""
+        "EXPR": "\"Attorney, 111 Williams Street, [organization location], Alabama.\""
       },
       {
         "OBJTYPE": "5",
@@ -2977,7 +2977,7 @@
       {
         "OBJTYPE": "5",
         "OBJCODE": "0",
-        "EXPR": "\" Attorney's Office, P.O. Box 812, Troy, AL 36081.\""
+        "EXPR": "\" Attorney's Office, P.O. Box 812, [organization location], AL 36081.\""
       },
       {
         "OBJTYPE": "5",
@@ -3133,7 +3133,7 @@
       {
         "OBJTYPE": "5",
         "OBJCODE": "0",
-        "EXPR": "\"TROY, ALABAMA 36081\""
+        "EXPR": "\"[organization location], ALABAMA 36081\""
       },
       {
         "OBJTYPE": "5",
@@ -12883,12 +12883,12 @@
       {
         "OBJTYPE": "5",
         "OBJCODE": "0",
-        "EXPR": "\"TROY, AL 36081\r 334/566-6896\""
+        "EXPR": "\"[organization location], AL 36081\r 334/566-6896\""
       },
       {
         "OBJTYPE": "5",
         "OBJCODE": "0",
-        "EXPR": "\"You are hereby summoned to immediately appear at the Office of the District\rAttorney, 111 Williams Street, Troy, Alabama.\r\r\""
+        "EXPR": "\"You are hereby summoned to immediately appear at the Office of the District\rAttorney, 111 Williams Street, [organization location], Alabama.\r\r\""
       },
       {
         "OBJTYPE": "5",
@@ -13071,7 +13071,7 @@
       {
         "OBJTYPE": "5",
         "OBJCODE": "0",
-        "EXPR": "\" TROY, AL 36081\r    334/566-6896\r\""
+        "EXPR": "\" [organization location], AL 36081\r    334/566-6896\r\""
       },
       {
         "OBJTYPE": "5",
@@ -14097,7 +14097,7 @@
       {
         "OBJTYPE": "5",
         "OBJCODE": "0",
-        "EXPR": "\"TROY\""
+        "EXPR": "\"[organization location]\""
       }
     ]
   },
@@ -14281,7 +14281,7 @@
       {
         "OBJTYPE": "5",
         "OBJCODE": "0",
-        "EXPR": "\"TROY, ALABAMA\""
+        "EXPR": "\"[organization location], ALABAMA\""
       }
     ]
   },

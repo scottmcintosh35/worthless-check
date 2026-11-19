@@ -164,7 +164,7 @@ class Screen:
         if payment is not None and self.ptree.exists(str(payment)):
             self.ptree.selection_set(str(payment));self.pick_payment()
         self.find_cases();self.show_history();self.update_summary()
-        if getattr(workspace.app.store, 'division', None) == 'troy':
+        if getattr(workspace.app.store, 'division', None) == 'office1':
             historical_page = ttk.Frame(self.book, padding=10)
             self.book.add(historical_page, text='Historical case links')
             self.historical_links = historical_case_links.Panel(self, historical_page)

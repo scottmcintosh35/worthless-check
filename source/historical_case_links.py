@@ -1,4 +1,4 @@
-"""Read-only references from Troy payments to the verified December 2004 archive."""
+"""Read-only references from Office 1 payments to the verified December 2004 archive."""
 import hashlib
 import json
 from datetime import datetime
@@ -9,7 +9,7 @@ import date_format
 import login
 import user_audit
 
-FILENAME = 'troy-historical-case-links.json'
+FILENAME = 'office1-historical-case-links.json'
 FILE_SHA256 = {
     '40d8a500884bb4078d43a0fc411b4a64f1590d100dd1bf119f19f5e80cc1d572',  # 2,341 links
     'b3e14e36adef8412e2c4a41a30b1c35527d702df0638e7884717ddfa89a52802',  # 2,352 links
@@ -37,11 +37,11 @@ def payment_fingerprint(payment):
 
 def load(store):
     login.require(store.db)
-    if getattr(store, 'division', None) != 'troy':
+    if getattr(store, 'division', None) != 'office1':
         return []
     payload = store.path.with_name(FILENAME).read_bytes()
     if hashlib.sha256(payload).hexdigest() not in FILE_SHA256:
-        raise ValueError('The historical case link file differs from the verified Troy release files.')
+        raise ValueError('The historical case link file differs from the verified Office 1 release files.')
     links = {link['payment_source_row']: link for link in json.loads(payload)}
     confirmed = []
     for row, data in store.db.execute(
@@ -105,7 +105,7 @@ class Panel:
         try:
             links = load(self.store)
         except FileNotFoundError:
-            self.status.configure(text='The verified historical case link file has not been installed in the Troy data folder.')
+            self.status.configure(text='The verified historical case link file has not been installed in the Office 1 data folder.')
             return
         except (OSError, ValueError) as error:
             self.status.configure(text=str(error))
@@ -119,7 +119,7 @@ class Panel:
             self.links[row] = link
             self.tree.insert('', 'end', iid=row,
                              values=(row, link['receipt_number'], link['payment_date'], link['case_number']))
-        self.status.configure(text=f'{len(self.links):,} results · {len(links):,} verified links in this Troy workspace')
+        self.status.configure(text=f'{len(self.links):,} results · {len(links):,} verified links in this Office 1 workspace')
         if len(self.links) == 1:
             self.tree.selection_set(next(iter(self.links)))
 
@@ -132,7 +132,7 @@ class Panel:
         user_audit.opened(self.store.db, 'HISTORICAL_CASE_LINK',
                           f"Payment row {selection[0]}, archived case {link['case_number']}")
         self.details.configure(text=(
-            f"Historical case {link['case_number']} · December 2004 Troy backup (1222.ZIP)\n"
+            f"Historical case {link['case_number']} · December 2004 Office 1 backup (1222.ZIP)\n"
             f"Archive WC_CASE row {link['historical_case_row']} · "
             f"Archive PAYMENTS row {link['historical_payment_row']}\n"
             "Read-only reference. The archive confirmed the case, defendant, merchant, receipt, date, and payment amounts."

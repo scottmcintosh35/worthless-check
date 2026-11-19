@@ -8,8 +8,8 @@
 [Setup]
 AppId={{F5044538-CC2F-4F1C-BB2E-719E75AF0131}
 AppName=Worthless Check
-AppVersion=1.0.0-rc65
-AppVerName=Worthless Check 1.0.0-rc65
+AppVersion=1.0.0-rc66
+AppVerName=Worthless Check 1.0.0-rc66
 AppPublisher=Worthless Check
 DefaultDirName={autopf}\Worthless Check
 DefaultGroupName=Worthless Check
@@ -22,7 +22,7 @@ ArchitecturesInstallIn64BitMode=x64os
 SetupArchitecture=x64
 MinVersion=10.0.20348
 OutputDir={#OutputFolder}
-OutputBaseFilename=Worthless-Check-Setup-rc65
+OutputBaseFilename=Worthless-Check-Setup-rc66
 Compression=lzma2
 SolidCompression=yes
 WizardStyle=modern
@@ -33,16 +33,11 @@ UsePreviousAppDir=not IsExtractOnly
 CloseApplications=yes
 RestartApplications=no
 AppMutex=PikeCountyWCInstallerEvaluation
-VersionInfoVersion=1.0.0.65
+VersionInfoVersion=1.0.0.66
 VersionInfoDescription=Worthless Check Setup
 
 [Tasks]
 Name: desktopicon; Description: "Create a desktop shortcut"; Flags: unchecked; Check: not IsExtractOnly
-
-[Dirs]
-Name: "{commonappdata}\PikeCountyWC-ServerEvaluation\Data"; Flags: uninsneveruninstall; Check: not IsExtractOnly
-
-Name: "{commonappdata}\PikeCountyWC-ServerEvaluation\EnterpriseData"; Flags: uninsneveruninstall; Check: not IsExtractOnly
 
 [Files]
 Source: "{#AppSource}\*"; DestDir: "{app}"; Flags: ignoreversion recursesubdirs createallsubdirs
@@ -76,49 +71,9 @@ begin
      FileExists(ExpandConstant('{autodesktop}\Check Management.lnk')));
 end;
 
-function EnsureGroup(GroupName: String): Boolean;
-var
-  ResultCode: Integer;
-begin
-  Result := False;
-  if not Exec(ExpandConstant('{sys}\net.exe'), 'localgroup ' + GroupName, '', SW_HIDE, ewWaitUntilTerminated, ResultCode) then Exit;
-  if ResultCode = 0 then begin
-    Result := True;
-    Exit;
-  end;
-  Result := Exec(ExpandConstant('{sys}\net.exe'), 'localgroup ' + GroupName + ' /add', '', SW_HIDE, ewWaitUntilTerminated, ResultCode) and (ResultCode = 0);
-end;
-
-function PrepareToInstall(var NeedsRestart: Boolean): String;
-begin
-  Result := '';
-  if IsExtractOnly then Exit;
-  if not IsAdmin then begin
-    Result := 'Run this installer as a server Administrator.';
-    Exit;
-  end;
-  if not EnsureGroup('PikeCountyWCUsers') then
-    Result := 'Could not configure the PikeCountyWCUsers local group.'
-  else if not EnsureGroup('EnterpriseWCUsers') then
-    Result := 'Could not configure the EnterpriseWCUsers local group.';
-end;
-
-procedure ProtectDivision(Folder, GroupName: String);
-var
-  Parameters: String;
-  ResultCode: Integer;
-begin
-  Parameters := '"' + Folder + '" /inheritance:r /grant:r "*S-1-5-18:(OI)(CI)F" "*S-1-5-32-544:(OI)(CI)F" "' +
-    ExpandConstant('{computername}') + '\' + GroupName + ':(OI)(CI)M"';
-  if (not Exec(ExpandConstant('{sys}\icacls.exe'), Parameters, '', SW_HIDE, ewWaitUntilTerminated, ResultCode)) or (ResultCode <> 0) then
-    RaiseException('Could not configure data folder permissions for ' + GroupName + '.');
-end;
-
 procedure CurStepChanged(CurStep: TSetupStep);
 begin
   if (CurStep = ssPostInstall) and not IsExtractOnly then begin
-    ProtectDivision(ExpandConstant('{commonappdata}\PikeCountyWC-ServerEvaluation\Data'), 'PikeCountyWCUsers');
-    ProtectDivision(ExpandConstant('{commonappdata}\PikeCountyWC-ServerEvaluation\EnterpriseData'), 'EnterpriseWCUsers');
     if FileExists(ExpandConstant('{autodesktop}\Worthless Check.lnk')) and
       FileExists(ExpandConstant('{autodesktop}\Check Management.lnk')) then
       DeleteFile(ExpandConstant('{autodesktop}\Check Management.lnk'));

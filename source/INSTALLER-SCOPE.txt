@@ -1,12 +1,10 @@
-Worthless Check - configurable office edition
-Release 1.0.0-rc65
+Worthless Check - personal empty workspace edition
+Release 1.0.0-rc66
 
-Windows Server 2022 x64 Desktop Experience application with two separate local office workspaces and named staff accounts. No real records or passwords are bundled.
+Windows 11 / Windows Server 2022 x64 Desktop Experience. A normal launch uses the signed-in Windows user's Local AppData\WorthlessCheck\Data\wc.sqlite. It starts with no users, cases or payments. Create your first Administrator and leave sample cases unchecked for an empty workspace.
 
-Sign in as an application Administrator and open Office Information to enter your organization name, optional heading lines, workspace name, address and contact details. No DA, judicial circuit, Alabama or county heading is added automatically. Blank identity uses Worthless Check.
+The installer copies application files and shortcuts. It does not create server access groups, alter shared database permissions, import office history, or reset existing records. Reopening uses the same personal workspace and preserves its contents.
 
-This installer is not an authorized production cutover. It creates/ensures existing compatibility groups PikeCountyWCUsers (Office 1) and EnterpriseWCUsers (Office 2), and protects each office data folder. Existing installation/data identifiers are retained for compatible upgrades. Close sessions and preserve recovery copies before any approved update.
+Set your custom organization heading in Office Information. No old organization heading is inferred. Archived agency-specific forms remain disabled until custom forms are reviewed.
 
-Standard receipt/report headings are configurable. Archived original agency legal forms and signatures are not reusable organization templates and cannot be rendered in this edition. Prepare and review organization-specific forms separately.
-
-First-run setup does not add fictional sample cases unless explicitly selected. Existing data, receipts, counters and pending reconciliation items are not changed by packaging this release.
+An existing shared workspace requires an explicit --division office1 or --division enterprise launch and its existing Windows access permissions. Existing shared database directories remain compatible; they are not selected by the default shortcut. Former office-specific launchers must be reviewed and updated separately. Installing this release does not authorize a production cutover.

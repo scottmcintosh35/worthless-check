@@ -281,7 +281,7 @@ def template(db,kind):
 
     row=db.execute('SELECT body FROM legacy_function_templates WHERE kind=?',(kind,)).fetchone()
 
-    return row[0] if row else default_template(kind, divisions.database_division(db) == 'troy')
+    return row[0] if row else default_template(kind, divisions.database_division(db) == 'office1')
 
 def save_template(db,kind,body,expected_revision,reason,layout=None):
 
@@ -320,7 +320,7 @@ def save_template(db,kind,body,expected_revision,reason,layout=None):
 
     except Exception:db.rollback();raise
 
-# Troy archive review: one deleted payment and reviewed zero-amount history entries.
+# Office 1 archive review: one deleted payment and reviewed zero-amount history entries.
 # Match the original identity as well as the row number, which can differ by backup.
 TROY_REGISTER_EXCLUSIONS = {
     154: ('94-1243', '97R0367', '19970429'),
@@ -349,7 +349,7 @@ TROY_REGISTER_EXCLUSIONS = {
 
 
 def receipt_register_exclusions(db):
-    if divisions.database_division(db) != 'troy':
+    if divisions.database_division(db) != 'office1':
         return set()
     rows = db.execute(
         f"""SELECT record_no,data_json FROM legacy_records

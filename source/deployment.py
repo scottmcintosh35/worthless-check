@@ -19,7 +19,7 @@ import divisions
 import desktop_theme
 import document_mode
 
-RELEASE='1.0.0-rc65'
+RELEASE='1.0.0-rc66'
 
 
 def first_administrator(root,store,division=None,*,choices=(),on_select=None):
@@ -32,7 +32,7 @@ def first_administrator(root,store,division=None,*,choices=(),on_select=None):
         win.transient(root)
     win.grab_set()
     ttk.Label(win,text='Create the first Administrator',font=('Segoe UI',16,'bold')).grid(row=0,column=0,columnspan=2,padx=20,pady=18)
-    ttk.Label(win,text='Deployment candidate: use test records until Server 2022 and office accounting verification are complete.',wraplength=550).grid(row=1,column=0,columnspan=2,padx=20,pady=8)
+    ttk.Label(win,text='Create your own Administrator account. This workspace starts with no users, cases or payments. Sample cases are optional.',wraplength=550).grid(row=1,column=0,columnspan=2,padx=20,pady=8)
     fields={}
     for i,(key,label) in enumerate([('name','Staff name'),('username','Username'),('initials','Initials'),('password','Password / passphrase (12+ characters)'),('confirm','Confirm password')],2):
         ttk.Label(win,text=label).grid(row=i,column=0,padx=15,pady=9,sticky='w')
@@ -176,7 +176,7 @@ def self_test(Store,App,result_file):
         checks.append('Atomic payment, receipt, balance and duplicate-request protection')
         content=reporting.build_report(store,'daily','2026-01-01','2026-01-31')
         assert 'TOTAL RECEIVED: $25.00' in content
-        defendants.save_profile(store.db,{'NAME':'SAMPLE PERSON','ADDRESS':'SAMPLE ADDRESS','CITY':'TROY','STATE':'AL','ZIP':'36081'})
+        defendants.save_profile(store.db,{'NAME':'SAMPLE PERSON','ADDRESS':'SAMPLE ADDRESS','CITY':'SAMPLE CITY','STATE':'AL','ZIP':'36081'})
         labels,skipped=reporting.label_documents(store.db)
         assert len(labels)==1 and not skipped
         (folder/'labels.html').write_text(reporting.labels_html(labels,reporting.DEFAULT_LAYOUT),encoding='utf-8')
@@ -286,6 +286,33 @@ def close_store(store):
         store.db.close()
 
 
+def resolve_workspace(explicit_data=None, division=None, output_mode=document_mode.TEST):
+    """Choose storage without opening or changing any database.
+
+    A normal shortcut is personal. Only an explicit division or an exact shared
+    database path enters the Windows-group-protected shared workspace flow.
+    """
+    if explicit_data is not None:
+        explicit_data = Path(explicit_data).resolve()
+        for key in divisions.LABELS:
+            if explicit_data == divisions.data_path(key).resolve():
+                division, explicit_data = key, None
+                break
+    if division is not None:
+        allowed = divisions.allowed_divisions()
+        if division not in allowed:
+            raise ValueError('Ask your administrator for Windows group access to the selected shared office.')
+        return divisions.data_path(division).resolve(), division, allowed
+    if output_mode != document_mode.TEST:
+        raise ValueError('Official output requires an explicitly selected, configured shared office.')
+    if explicit_data is not None:
+        return explicit_data, None, ()
+    local = os.environ.get('LOCALAPPDATA')
+    if not local:
+        raise ValueError('Windows Local AppData is unavailable. Select a local workspace with --data.')
+    return (Path(local) / 'WorthlessCheck' / 'Data' / 'wc.sqlite').resolve(), None, ()
+
+
 def run(Store, App):
     parser = argparse.ArgumentParser()
     parser.add_argument('--data', type=Path)
@@ -304,17 +331,7 @@ def run(Store, App):
         parser.error('--data and --division cannot be combined')
     if args.data and args.output_mode != document_mode.TEST:
         parser.error('Official output requires a configured division workspace.')
-    if args.data:
-        resolved = args.data.resolve()
-        for key in divisions.LABELS:
-            if resolved == divisions.data_path(key).resolve():
-                args.division, args.data = key, None
-                break
-    allowed = divisions.allowed_divisions() if args.data is None else ()
-    division = args.division or (allowed[0] if allowed else None)
-    if args.data is None and division not in allowed:
-        raise ValueError('Ask your server administrator for Windows group access to your assigned division.')
-    data = args.data or divisions.data_path(division)
+    data, division, allowed = resolve_workspace(args.data, args.division, args.output_mode)
     if str(data).startswith(chr(92)*2):
         raise ValueError('Use a local disk for this desktop evaluation database.')
     data = data.resolve()
@@ -328,10 +345,10 @@ def run(Store, App):
     if args.output_mode == document_mode.REHEARSAL:
         profile = Path(os.environ['PROGRAMDATA']).resolve()
         local = Path(os.environ['LOCALAPPDATA']).resolve()
-        label = {'troy':'Troy','enterprise':'Enterprise'}.get(args.division)
+        label = {'office1':'Office1','enterprise':'Office2'}.get(args.division)
         expected = divisions.data_path(args.division).absolute() if label else None
         if (not label or profile.parent != local or
-                not profile.name.startswith(f'DA12th-WC-rc61-{label}-Rehearsal-') or
+                not profile.name.startswith(f'WorthlessCheck-{label}-Rehearsal-') or
                 expected != data or not data.is_file()):
             raise ValueError('Run the official-output rehearsal from its isolated launcher and verified backup copy.')
 

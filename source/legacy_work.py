@@ -60,7 +60,7 @@ def source_division(db):
         if city in divisions.LABELS:
             offices.add(city)
         if county == 'pike':
-            offices.add('troy')
+            offices.add('office1')
     return next(iter(offices)) if len(offices) == 1 else None
 
 

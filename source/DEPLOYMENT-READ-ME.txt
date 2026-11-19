@@ -1,16 +1,11 @@
-WORTHLESS CHECK
-Release 1.0.0-rc65 - configurable organization headings
+WORTHLESS CHECK rc66
 
-SET YOUR IDENTITY
-Sign in as an application Administrator. Open Office Information, enter Organization / office name, optional heading lines 2-4, optional workspace name, and your own address/contact details. Save Office Information. The banner and newly generated standard receipts/reports use those values. Blank heading fields display Worthless Check. No circuit/county/state heading is inferred from imported legacy fields. State/region is optional. Staff cannot edit organization settings.
+DEFAULT: empty personal workspace in %LOCALAPPDATA%\WorthlessCheck\Data\wc.sqlite.
+Create your own first Administrator. Keep sample cases unchecked for zero cases/payments.
+Subsequent launches reopen this same personal workspace; reinstalling never clears it.
+Configure your own organization and heading lines in Office Information.
 
-COMPATIBILITY
-Office 1 uses internal division key troy and group PikeCountyWCUsers; Office 2 uses enterprise and EnterpriseWCUsers. Data paths remain C:\ProgramData\PikeCountyWC-ServerEvaluation\Data\wc.sqlite and EnterpriseData\wc.sqlite. Executable remains PikeCountyWC.exe. New installation folder defaults to Worthless Check; upgrades may retain the existing folder. These internal identifiers do not create printed DA/county branding.
+SHARED COMPATIBILITY: explicitly choose --division office1 or --division enterprise.
+Shared paths remain %PROGRAMDATA%\PikeCountyWC-ServerEvaluation\Data\wc.sqlite and EnterpriseData\wc.sqlite. Existing Windows group checks remain in force for these explicit shared launches. The installer does not provision groups or change shared folder permissions. Prior office-specific launchers need separate review before reuse.
 
-OUTPUT
-Standard receipts and reports use saved headings. Already exported files are untouched. Reprints regenerate headings using current organization settings while retaining the saved financial balances. Archived original agency forms/signatures are blocked, pending organization-specific template work and review. The original assets are preserved for historical reference.
-
-OPERATIONS
-Use the local server SQLite databases, separate Windows sessions and office access groups. Application roles are separate from Windows permissions. Staff can create new cases and record payments; other legacy-record creation, existing-record edits, configuration and reconciliation require Administrator. Preserve complete backups and review any upgrade independently. Never copy an open main SQLite file alone or discard journals.
-
-No installation or live-data update is authorized by this source/build. Keep the three existing Troy receipt pairs pending.
+The installer contains no office databases or credentials. Existing records, backups and pending reconciliation items are not modified by building or publishing this release. No production deployment is performed.
