@@ -1,6 +1,6 @@
-# Check Management
+# Worthless Check
 
-Private source repository for the configurable Windows check-management application. Current release: **1.0.0-rc64**.
+Private source repository for the configurable Windows check-management application. Current release: **1.0.0-rc65**.
 
 The application supports separate office workspaces, case entry, payment allocation, receipt generation/reprints, reporting, named Staff/Administrator accounts and SQLite backups. rc63 permits Staff to create new cases and record payments while preserving Administrator restrictions on existing-record edits, other master-record creation, settings, users and reconciliation.
 
@@ -28,7 +28,7 @@ cd source
 .\Build-Windows.ps1 -InnoCompiler 'C:\Program Files\Inno Setup 7\ISCC.exe'
 ```
 
-Output: `source/build/installer/Check-Management-Setup-rc64.exe`.
+Output: `source/build/installer/Worthless-Check-Setup-rc65.exe`.
 The installer is unsigned. Rebuilt binaries can differ from the previously verified installer hash; do not bypass a deployment tool's hash guard.
 
 ## Disposable self-test
@@ -67,9 +67,9 @@ Use the actual changed file paths when saving code changes. A push updates sourc
 
 ## Custom organization headings (rc64)
 
-Sign in as an Administrator and open **Office Information**. Set Organization / office name, optional heading lines 2-4, and an optional workspace name. Fill in your own address and contact information and choose **Save Office Information**. New banners, standard receipts and reports use those values. Blank identity fields show only Check Management; no DA, judicial circuit, Alabama or county heading is inferred. State/region is optional. Existing fees, numbering and legacy fields are preserved when omitted from an office-information save.
+Sign in as an Administrator and open **Office Information**. Set Organization / office name, optional heading lines 2-4, and an optional workspace name. Fill in your own address and contact information and choose **Save Office Information**. New banners, standard receipts and reports use those values. Blank identity fields show only Worthless Check; no DA, judicial circuit, Alabama or county heading is inferred. State/region is optional. Existing fees, numbering and legacy fields are preserved when omitted from an office-information save.
 
-Workspace selectors use Office 1 and Office 2 by default. Internal troy/enterprise keys, executable filename, Windows groups and existing data paths remain compatibility identifiers; they are not printed organization names. Existing installations can keep their prior install directory; new installations default to Check Management.
+Workspace selectors use Office 1 and Office 2 by default. Internal troy/enterprise keys, executable filename, Windows groups and existing data paths remain compatibility identifiers; they are not printed organization names. Existing installations can keep their prior install directory; new installations default to Worthless Check.
 
 Archived original agency forms contain specialized wording/signatures and are blocked from rendering in this reusable edition until organization-specific templates are prepared and reviewed. This does not delete templates or alter saved original documents. Standard receipt/report output remains configurable. Previously exported files are not rewritten. New heading settings apply when documents are generated, including reprints; historic financial snapshots remain unchanged.
 
@@ -80,3 +80,9 @@ Run the disposable custom-organization and permission checks with `python tests/
 ## Fresh empty workspace
 
 See [the empty-workspace guide](docs/empty-workspace.md) for the corrected v2 packaging workflow. It starts with zero users and business records, retains standard reference lists, excludes SQLite sidecars from the kit, and preserves existing databases/backups.
+
+## Worthless Check app name (rc65)
+
+The app, About/error dialogs, default heading, Start menu/desktop shortcut and Windows installer now display Worthless Check. Your saved organization heading/workspace name remains separate and is not replaced. Existing database paths, executable filename and installer AppId stay compatible with prior versions. New installations default to a Worthless Check program folder.
+
+Windows installer: `Worthless-Check-Setup-rc65.exe` (Windows 11 / Server 2022 x64 Desktop Experience). It contains no office databases or credentials. For an empty isolated test, build the kit described in docs/empty-workspace.md and keep sample cases unchecked. No live installation or database modification is performed by this source change.
