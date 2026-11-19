@@ -18,7 +18,7 @@ with tempfile.TemporaryDirectory(ignore_cleanup_errors=True) as tmp:
   old={**users.DEFAULTS,'DA':'OLD NAME','COUNTY':'Pike' if sub=='Data' else 'Coffee','CIRCUIT':'Twelfth','STATE':'AL','DA_FEE':'155.00','RECEIPT_START':'12345'}
   db.execute('INSERT INTO office_settings VALUES(1,?)',(json.dumps(old),));db.commit()
   original_json=db.execute('SELECT data FROM office_settings').fetchone()[0]
-  assert users.document_heading(db)=='Check Management'
+  assert users.document_heading(db)=='Worthless Check'
   assert db.execute('SELECT data FROM office_settings').fetchone()[0]==original_json
   assert users.workspace_label(db) in ('Office 1','Office 2')
   app=SimpleNamespace(store=store,root=root);app.office_heading=office.show_heading(root,users.document_heading(db).splitlines())
@@ -28,12 +28,12 @@ with tempfile.TemporaryDirectory(ignore_cleanup_errors=True) as tmp:
   with patch('users.messagebox.showinfo'),patch('users.messagebox.showerror') as err:form.save();assert not err.called
   assert users.document_heading(db)=='Sample & Co.\nCommunity Collections\nNorth Region\nAccounts Office'
   assert [x.cget('text') for x in app.office_heading.winfo_children()]==users.document_heading(db).splitlines()
-  assert 'North Desk | Check Management | 1.0.0-rc64' in root.title()
+  assert 'North Desk | Worthless Check | 1.0.0-rc65' in root.title()
   saved=users.get_settings(db);assert saved['COUNTY']==old['COUNTY'] and saved['CIRCUIT']=='Twelfth' and saved['DA_FEE']=='155.00' and saved['RECEIPT_START']=='12345'
   payload={'kind':'receipts','title':'Register','columns':[],'items':[],'totals':{}}
   html=legacy_functions.print_html(payload,Path(tmp)/sub/'reports',users.document_heading(db)).read_text()
   assert 'Sample &amp; Co.' in html and 'Office of the District Attorney' not in html and 'State of Alabama' not in html
-  fallback=legacy_functions.print_html(payload,Path(tmp)/sub/'reports').read_text();assert 'Check Management' in fallback and 'Pike County' not in fallback
+  fallback=legacy_functions.print_html(payload,Path(tmp)/sub/'reports').read_text();assert 'Worthless Check' in fallback and 'Pike County' not in fallback
   store.seed();receipt=store.receipt(store.post(1,'2026-11-19','AD','Cash',[100,0,0,0,0],'generic-test'))
   assert receipt.startswith(users.document_heading(db))
   try:users.save_settings(db,{'ORGANIZATION':'A\nB'})
