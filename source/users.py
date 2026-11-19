@@ -116,7 +116,7 @@ def save_settings(db,data):
 def document_heading(db):
     settings=get_settings(db)
     lines=[settings['ORGANIZATION'],settings['HEADING2'],settings['HEADING3'],settings['HEADING4']]
-    return '\n'.join(line for line in lines if line.strip()) or 'Check Management'
+    return '\n'.join(line for line in lines if line.strip()) or 'Worthless Check'
 
 
 def workspace_label(db):
@@ -242,7 +242,7 @@ class OfficeForm:
                             self.entries['BACKUP_FOLDER'].insert(0,folder)
                     ttk.Button(page,text='Browse...',command=browse).grid(row=index,column=2,padx=8)
             if title=='Office Information':
-                ttk.Label(page,text='Enter your own organization and heading lines. Blank headings use Check Management; no DA, circuit, state or county heading is added automatically.',wraplength=760).grid(row=len(fields),column=0,columnspan=3,padx=15,pady=15,sticky='w')
+                ttk.Label(page,text='Enter your own organization and heading lines. Blank headings use Worthless Check; no DA, circuit, state or county heading is added automatically.',wraplength=760).grid(row=len(fields),column=0,columnspan=3,padx=15,pady=15,sticky='w')
             if title=='Defaults':
                 ttk.Label(page,text='Receipt numbering starts at this number or above the highest retained numeric receipt, whichever is higher. Leave blank to continue the existing sequence.',wraplength=760).grid(row=len(fields),column=0,columnspan=3,padx=15,pady=15,sticky='w')
 
@@ -253,7 +253,7 @@ class OfficeForm:
             update_heading(self.app.office_heading, document_heading(self.db).splitlines())
             from deployment import RELEASE
             current=login.current(self.db)
-            self.app.root.title(workspace_label(self.db)+' | Check Management | '+RELEASE+(' | '+current['username'] if current else ''))
+            self.app.root.title(workspace_label(self.db)+' | Worthless Check | '+RELEASE+(' | '+current['username'] if current else ''))
             messagebox.showinfo('Saved','Office information and coordinator details saved.',parent=self.parent)
         except (ValueError,sqlite3.Error) as error:
             messagebox.showerror('Cannot save office information',str(error),parent=self.parent)

@@ -24,7 +24,7 @@ class Viewer:
             self.db.close()
             raise
         self.root=root
-        root.title('Check Management | Imported legacy records - READ ONLY')
+        root.title('Worthless Check | Imported legacy records - READ ONLY')
         root.geometry('1150x780')
         import import_dialog
         menu=tk.Menu(root)

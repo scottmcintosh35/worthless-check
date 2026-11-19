@@ -1,9 +1,9 @@
-Check Management - configurable office edition
-Release 1.0.0-rc64
+Worthless Check - configurable office edition
+Release 1.0.0-rc65
 
 Windows Server 2022 x64 Desktop Experience application with two separate local office workspaces and named staff accounts. No real records or passwords are bundled.
 
-Sign in as an application Administrator and open Office Information to enter your organization name, optional heading lines, workspace name, address and contact details. No DA, judicial circuit, Alabama or county heading is added automatically. Blank identity uses Check Management.
+Sign in as an application Administrator and open Office Information to enter your organization name, optional heading lines, workspace name, address and contact details. No DA, judicial circuit, Alabama or county heading is added automatically. Blank identity uses Worthless Check.
 
 This installer is not an authorized production cutover. It creates/ensures existing compatibility groups PikeCountyWCUsers (Office 1) and EnterpriseWCUsers (Office 2), and protects each office data folder. Existing installation/data identifiers are retained for compatible upgrades. Close sessions and preserve recovery copies before any approved update.
 

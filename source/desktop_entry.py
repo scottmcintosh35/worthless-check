@@ -14,5 +14,5 @@ if __name__=='__main__':
         folder.mkdir(parents=True,exist_ok=True)
         path=folder/'startup-error.txt'
         path.write_text(traceback.format_exc(),encoding='utf-8')
-        ctypes.windll.user32.MessageBoxW(None,'The application could not start.\n\n'+str(error)+'\n\nError details: '+str(path),'Check Management',0x10)
+        ctypes.windll.user32.MessageBoxW(None,'The application could not start.\n\n'+str(error)+'\n\nError details: '+str(path),'Worthless Check',0x10)
         raise SystemExit(1)

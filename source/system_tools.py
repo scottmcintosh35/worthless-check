@@ -123,7 +123,7 @@ class SystemTools:
 
     def about(self):
         from deployment import RELEASE
-        messagebox.showinfo('About Check Management',
+        messagebox.showinfo('About Worthless Check',
             users.document_heading(self.db)+f'\n\nServer Deployment Candidate {RELEASE}\nShared local evaluation database and read-only legacy review.\n\nDatabase: '+str(self.app.store.path),parent=self.app.root)
 
     def calculator(self):
@@ -144,7 +144,7 @@ class SystemTools:
 
     def sign_in(self):
         if login_dialog(self.app.root,self.db):
-            self.app.root.title((divisions.LABELS.get(getattr(self.app, 'division', None), 'Check Management') + ' | Signed in: ')+login.current(self.db)['username'])
+            self.app.root.title((divisions.LABELS.get(getattr(self.app, 'division', None), 'Worthless Check') + ' | Signed in: ')+login.current(self.db)['username'])
 
     def sign_out(self):
         if not login.enabled(self.db):
@@ -153,7 +153,7 @@ class SystemTools:
         self.app.root.withdraw()
         if login_dialog(self.app.root,self.db,True):
             self.app.root.deiconify()
-            self.app.root.title((divisions.LABELS.get(getattr(self.app, 'division', None), 'Check Management') + ' | Signed in: ')+login.current(self.db)['username'])
+            self.app.root.title((divisions.LABELS.get(getattr(self.app, 'division', None), 'Worthless Check') + ' | Signed in: ')+login.current(self.db)['username'])
         else:
             self.app.root.destroy()
 

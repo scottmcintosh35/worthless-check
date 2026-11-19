@@ -19,7 +19,7 @@ import divisions
 import desktop_theme
 import document_mode
 
-RELEASE='1.0.0-rc64'
+RELEASE='1.0.0-rc65'
 
 
 def first_administrator(root,store,division=None,*,choices=(),on_select=None):
@@ -27,7 +27,7 @@ def first_administrator(root,store,division=None,*,choices=(),on_select=None):
     if store.db.execute('SELECT 1 FROM staff_users WHERE active=1').fetchone():
         return login_dialog(root,store.db,division=division,choices=choices,on_select=on_select,maximized=True)
     win=tk.Toplevel(root)
-    win.title((divisions.LABELS.get(division) or 'Check Management') + ' - First Run')
+    win.title((divisions.LABELS.get(division) or 'Worthless Check') + ' - First Run')
     if root.winfo_viewable():
         win.transient(root)
     win.grab_set()
@@ -393,7 +393,7 @@ def run(Store, App):
             store.switch_division = switch
             App(root, store)
             label = users.workspace_label(store.db)
-            root.title(label + ' | Check Management | ' + RELEASE + ' | ' + login.current(store.db)['username'])
+            root.title(label + ' | Worthless Check | ' + RELEASE + ' | ' + login.current(store.db)['username'])
             root.state('zoomed')
             root.deiconify()
             root.mainloop()

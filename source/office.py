@@ -1,5 +1,5 @@
 """Office heading shared by the application and printable documents."""
-HEADING = ('Check Management',)
+HEADING = ('Worthless Check',)
 HEADING_TEXT = '\n'.join(HEADING)
 
 

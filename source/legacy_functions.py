@@ -741,7 +741,7 @@ def print_html(payload,folder,office_heading=None):
     if 'original_pages' in payload:
         path.write_text(original_print.html_document(payload['original_pages']),encoding='utf-8');return path
 
-    heading='<h2>Check Management</h2>'
+    heading='<h2>Worthless Check</h2>'
 
     if office_heading:
         heading = '<h2>' + html.escape(office_heading).replace(chr(10), '<br>') + '</h2>'

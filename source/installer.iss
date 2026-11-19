@@ -7,12 +7,13 @@
 
 [Setup]
 AppId={{F5044538-CC2F-4F1C-BB2E-719E75AF0131}
-AppName=Check Management
-AppVersion=1.0.0-rc64
-AppVerName=Check Management 1.0.0-rc64
-AppPublisher=Check Management
-DefaultDirName={autopf}\Check Management
-DefaultGroupName=Check Management
+AppName=Worthless Check
+AppVersion=1.0.0-rc65
+AppVerName=Worthless Check 1.0.0-rc65
+AppPublisher=Worthless Check
+DefaultDirName={autopf}\Worthless Check
+DefaultGroupName=Worthless Check
+UsePreviousGroup=no
 DisableProgramGroupPage=yes
 PrivilegesRequired=admin
 PrivilegesRequiredOverridesAllowed=commandline
@@ -21,7 +22,7 @@ ArchitecturesInstallIn64BitMode=x64os
 SetupArchitecture=x64
 MinVersion=10.0.20348
 OutputDir={#OutputFolder}
-OutputBaseFilename=Check-Management-Setup-rc64
+OutputBaseFilename=Worthless-Check-Setup-rc65
 Compression=lzma2
 SolidCompression=yes
 WizardStyle=modern
@@ -32,8 +33,8 @@ UsePreviousAppDir=not IsExtractOnly
 CloseApplications=yes
 RestartApplications=no
 AppMutex=PikeCountyWCInstallerEvaluation
-VersionInfoVersion=1.0.0.64
-VersionInfoDescription=Check Management Setup
+VersionInfoVersion=1.0.0.65
+VersionInfoDescription=Worthless Check Setup
 
 [Tasks]
 Name: desktopicon; Description: "Create a desktop shortcut"; Flags: unchecked; Check: not IsExtractOnly
@@ -50,12 +51,12 @@ Source: "THIRD-PARTY-NOTICES.txt"; DestDir: "{app}"; Flags: ignoreversion
 Source: "returned-check.ico"; DestDir: "{app}"; Flags: ignoreversion
 
 [Icons]
-Name: "{group}\Check Management"; Filename: "{app}\PikeCountyWC.exe"; WorkingDir: "{app}"; IconFilename: "{app}\returned-check.ico"; Check: not IsExtractOnly
+Name: "{group}\Worthless Check"; Filename: "{app}\PikeCountyWC.exe"; WorkingDir: "{app}"; IconFilename: "{app}\returned-check.ico"; Check: not IsExtractOnly
 Name: "{group}\Deployment Notes"; Filename: "{app}\DEPLOYMENT-READ-ME.txt"; Check: not IsExtractOnly
-Name: "{autodesktop}\Check Management"; Filename: "{app}\PikeCountyWC.exe"; WorkingDir: "{app}"; IconFilename: "{app}\returned-check.ico"; Check: ShouldCreateDesktopShortcut
+Name: "{autodesktop}\Worthless Check"; Filename: "{app}\PikeCountyWC.exe"; WorkingDir: "{app}"; IconFilename: "{app}\returned-check.ico"; Check: ShouldCreateDesktopShortcut
 
 [Run]
-Filename: "{app}\PikeCountyWC.exe"; Description: "Open Check Management"; Flags: postinstall nowait skipifsilent unchecked; Check: not IsExtractOnly
+Filename: "{app}\PikeCountyWC.exe"; Description: "Open Worthless Check"; Flags: postinstall nowait skipifsilent unchecked; Check: not IsExtractOnly
 
 [Code]
 function IsExtractOnly: Boolean;
@@ -71,7 +72,8 @@ end;
 function ShouldCreateDesktopShortcut: Boolean;
 begin
   Result := not IsExtractOnly and
-    (WizardIsTaskSelected('desktopicon') or FileExists(OldDesktopShortcut));
+    (WizardIsTaskSelected('desktopicon') or FileExists(OldDesktopShortcut) or
+     FileExists(ExpandConstant('{autodesktop}\Check Management.lnk')));
 end;
 
 function EnsureGroup(GroupName: String): Boolean;
@@ -117,10 +119,13 @@ begin
   if (CurStep = ssPostInstall) and not IsExtractOnly then begin
     ProtectDivision(ExpandConstant('{commonappdata}\PikeCountyWC-ServerEvaluation\Data'), 'PikeCountyWCUsers');
     ProtectDivision(ExpandConstant('{commonappdata}\PikeCountyWC-ServerEvaluation\EnterpriseData'), 'EnterpriseWCUsers');
-    if FileExists(ExpandConstant('{autodesktop}\Check Management.lnk')) and
+    if FileExists(ExpandConstant('{autodesktop}\Worthless Check.lnk')) and
+      FileExists(ExpandConstant('{autodesktop}\Check Management.lnk')) then
+      DeleteFile(ExpandConstant('{autodesktop}\Check Management.lnk'));
+    if FileExists(ExpandConstant('{autodesktop}\Worthless Check.lnk')) and
       FileExists(OldDesktopShortcut) then
       DeleteFile(OldDesktopShortcut);
-    if FileExists(ExpandConstant('{group}\Check Management.lnk')) then
+    if FileExists(ExpandConstant('{group}\Worthless Check.lnk')) then
       DeleteFile(ExpandConstant('{group}\Pike County Worthless Check Unit.lnk'));
   end;
 end;
