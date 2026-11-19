@@ -19,7 +19,7 @@ import divisions
 import desktop_theme
 import document_mode
 
-RELEASE='1.0.0-rc63'
+RELEASE='1.0.0-rc64'
 
 
 def first_administrator(root,store,division=None,*,choices=(),on_select=None):
@@ -27,7 +27,7 @@ def first_administrator(root,store,division=None,*,choices=(),on_select=None):
     if store.db.execute('SELECT 1 FROM staff_users WHERE active=1').fetchone():
         return login_dialog(root,store.db,division=division,choices=choices,on_select=on_select,maximized=True)
     win=tk.Toplevel(root)
-    win.title((divisions.LABELS.get(division) or 'Worthless Check Unit') + ' - First Run')
+    win.title((divisions.LABELS.get(division) or 'Check Management') + ' - First Run')
     if root.winfo_viewable():
         win.transient(root)
     win.grab_set()
@@ -39,7 +39,7 @@ def first_administrator(root,store,division=None,*,choices=(),on_select=None):
         entry=ttk.Entry(win,width=36,show='*' if key in ('password','confirm') else '')
         entry.grid(row=i,column=1,padx=15,pady=9)
         fields[key]=entry
-    sample=tk.BooleanVar(value=division!='enterprise')
+    sample=tk.BooleanVar(value=False)
     ttk.Checkbutton(win,text='Add fictional sample cases for evaluation',variable=sample).grid(row=7,column=0,columnspan=2,padx=15,pady=12,sticky='w')
     if choices:
         division_picker(win, 9, division, choices, on_select)
@@ -268,7 +268,7 @@ def open_store(Store, root, data, division, *, choices=(), on_select=None, outpu
                 success = login_dialog(root, store.db, True, division, maximized=True)
         else:
             if division == 'enterprise' and not divisions.is_windows_admin():
-                raise ValueError('A Windows administrator must set up Enterprise DA before staff can sign in.')
+                raise ValueError('A Windows administrator must set up Office 2 before staff can sign in.')
             success = first_administrator(root, store, division, choices=choices, on_select=on_select)
         if success:
             return store
@@ -392,8 +392,8 @@ def run(Store, App):
             store.division_choices = () if args.output_mode == document_mode.REHEARSAL else allowed
             store.switch_division = switch
             App(root, store)
-            label = divisions.LABELS.get(division, 'Worthless Check Unit')
-            root.title(label + ' | Worthless Check Unit | ' + RELEASE + ' | ' + login.current(store.db)['username'])
+            label = users.workspace_label(store.db)
+            root.title(label + ' | Check Management | ' + RELEASE + ' | ' + login.current(store.db)['username'])
             root.state('zoomed')
             root.deiconify()
             root.mainloop()

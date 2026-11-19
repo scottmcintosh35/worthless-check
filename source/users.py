@@ -9,10 +9,10 @@ from tkinter import ttk, messagebox, filedialog
 import login
 import divisions
 
-DEFAULTS={'DA':'','COUNTY':'Pike','CIRCUIT':'Twelfth','ADDRESS1':'','ADDRESS2':'','CITY':'','STATE':'AL','ZIP':'','PHONE':'','FAX':'',
+DEFAULTS={'ORGANIZATION':'','HEADING2':'','HEADING3':'','HEADING4':'','OFFICE_LABEL':'','DA':'','COUNTY':'','CIRCUIT':'','ADDRESS1':'','ADDRESS2':'','CITY':'','STATE':'','ZIP':'','PHONE':'','FAX':'',
           'ADMIN':'','GJ':'','VS':'','WC':'','REST':'','BACKUP_FOLDER':'','DA_FEE':'0.00','MERCHANT_FEE':'30.00','WITHDRAWAL_FEE':'30.00','DUE_BUSINESS_DAYS':'15','BUSINESS_HOLIDAYS':'','RECEIPT_START':''}
-OFFICE_FIELDS=[('DA','District Attorney'),('COUNTY','County'),('CIRCUIT','Circuit (spell out)'),('ADDRESS1','Address 1'),('ADDRESS2','Address 2'),('CITY','City'),('STATE','State'),('ZIP','ZIP'),('PHONE','Phone'),('FAX','Fax')]
-COORDINATORS=[('ADMIN','Administrative Assistant'),('GJ','Grand Jury'),('VS','Victim Services'),('WC','Worthless Check'),('REST','Post-Trial Restitution')]
+OFFICE_FIELDS=[('ORGANIZATION','Organization / office name'),('HEADING2','Heading line 2 (optional)'),('HEADING3','Heading line 3 (optional)'),('HEADING4','Heading line 4 (optional)'),('OFFICE_LABEL','Workspace name (optional)'),('ADDRESS1','Address 1'),('ADDRESS2','Address 2'),('CITY','City'),('STATE','State / region code (optional)'),('ZIP','Postal / ZIP code'),('PHONE','Phone'),('FAX','Fax')]
+COORDINATORS=[('ADMIN','Administrative Assistant'),('GJ','Coordinator 2'),('VS','Coordinator 3'),('WC','Program coordinator'),('REST','Coordinator 5')]
 
 
 def setup(db):
@@ -73,19 +73,18 @@ def save_user(db,username,name,initials,title,active=True,user_id=None,*,passwor
 
 def get_settings(db):
     row=db.execute('SELECT data FROM office_settings WHERE id=1').fetchone()
-    defaults = DEFAULTS
-    if divisions.database_division(db) == 'enterprise':
-        defaults = {**DEFAULTS, 'COUNTY': '', 'CIRCUIT': '', 'CITY': 'Enterprise'}
-    return {**defaults, **(json.loads(row[0]) if row else {})}
+    return {**DEFAULTS, **(json.loads(row[0]) if row else {})}
 
 
 def save_settings(db,data):
     login.require(db,True)
-    values={key:str(data.get(key,default)).strip() for key,default in DEFAULTS.items()}
-    if not values['COUNTY'] or not values['CIRCUIT'] or any(c.isdigit() for c in values['CIRCUIT']):
-        raise ValueError('Enter the county and spell out the circuit name, such as Twelfth.')
-    if len(values['STATE'])!=2:
-        raise ValueError('State must be a two-letter abbreviation.')
+    previous=get_settings(db)
+    values={key:str(data.get(key,previous.get(key,default))).strip() for key,default in DEFAULTS.items()}
+    for key in ('ORGANIZATION','HEADING2','HEADING3','HEADING4','OFFICE_LABEL'):
+        if len(values[key])>120 or any(ord(c)<32 for c in values[key]):
+            raise ValueError('Office heading fields must be single lines of at most 120 characters.')
+    if values['STATE'] and len(values['STATE'])!=2:
+        raise ValueError('State / region code must be blank or a two-letter abbreviation.')
     values['STATE']=values['STATE'].upper()
     try:
         amount=Decimal(values['DA_FEE'] or '0')
@@ -116,15 +115,14 @@ def save_settings(db,data):
 
 def document_heading(db):
     settings=get_settings(db)
-    division = divisions.database_division(db)
-    circuit = re.sub(
-        r'(?:\b(?:judicial\s+)?(?:circuit|district)\s*)+$', '',
-        settings['CIRCUIT'].strip(), flags=re.IGNORECASE,
-    ).strip()
-    county = re.sub(r'(?:\bcounty\s*)+$', '', settings['COUNTY'].strip(), flags=re.IGNORECASE).strip()
-    unit = 'Worthless Check Unit - ' + (county + ' County' if county else divisions.LABELS[division])
-    return '\n'.join(line for line in ('Office of the District Attorney',
-        circuit + ' Judicial Circuit' if circuit else '', 'State of Alabama', unit) if line)
+    lines=[settings['ORGANIZATION'],settings['HEADING2'],settings['HEADING3'],settings['HEADING4']]
+    return '\n'.join(line for line in lines if line.strip()) or 'Check Management'
+
+
+def workspace_label(db):
+    settings=get_settings(db)
+    return settings['OFFICE_LABEL'] or settings['ORGANIZATION'] or divisions.LABELS[divisions.database_division(db)]
+
 
 
 def document_contact(db):
@@ -208,7 +206,7 @@ class OfficeForm:
         book.pack(fill='both',expand=True,padx=15,pady=15)
         settings=get_settings(self.db)
         staff=[r[0] for r in self.db.execute('SELECT full_name FROM staff_users WHERE active=1 ORDER BY full_name')]
-        for title,fields in [('Office Information',OFFICE_FIELDS),('Coordinators',COORDINATORS),('Defaults',[('BACKUP_FOLDER','Database backup location'),('DA_FEE','Default Worthless Check DA fee'),('MERCHANT_FEE','Default merchant fee'),('WITHDRAWAL_FEE','Default withdrawal fee (every new case)'),('DUE_BUSINESS_DAYS','Due business days after entry'),('BUSINESS_HOLIDAYS','Holiday exclusions (MM-DD-YYYY, comma separated)'),('RECEIPT_START','Starting numeric receipt (optional)')])]:
+        for title,fields in [('Office Information',OFFICE_FIELDS),('Coordinators',COORDINATORS),('Defaults',[('BACKUP_FOLDER','Database backup location'),('DA_FEE','Default administration / warrant fee'),('MERCHANT_FEE','Default merchant fee'),('WITHDRAWAL_FEE','Default withdrawal fee (every new case)'),('DUE_BUSINESS_DAYS','Due business days after entry'),('BUSINESS_HOLIDAYS','Holiday exclusions (MM-DD-YYYY, comma separated)'),('RECEIPT_START','Starting numeric receipt (optional)')])]:
             panel = ttk.Frame(book)
             book.add(panel, text=title)
             canvas = tk.Canvas(panel, highlightthickness=0, background=ttk.Style(panel).lookup('TFrame', 'background'))
@@ -243,6 +241,8 @@ class OfficeForm:
                             self.entries['BACKUP_FOLDER'].delete(0,'end')
                             self.entries['BACKUP_FOLDER'].insert(0,folder)
                     ttk.Button(page,text='Browse...',command=browse).grid(row=index,column=2,padx=8)
+            if title=='Office Information':
+                ttk.Label(page,text='Enter your own organization and heading lines. Blank headings use Check Management; no DA, circuit, state or county heading is added automatically.',wraplength=760).grid(row=len(fields),column=0,columnspan=3,padx=15,pady=15,sticky='w')
             if title=='Defaults':
                 ttk.Label(page,text='Receipt numbering starts at this number or above the highest retained numeric receipt, whichever is higher. Leave blank to continue the existing sequence.',wraplength=760).grid(row=len(fields),column=0,columnspan=3,padx=15,pady=15,sticky='w')
 
@@ -251,6 +251,9 @@ class OfficeForm:
             save_settings(self.db,{key:entry.get() for key,entry in self.entries.items()})
             from office import update_heading
             update_heading(self.app.office_heading, document_heading(self.db).splitlines())
+            from deployment import RELEASE
+            current=login.current(self.db)
+            self.app.root.title(workspace_label(self.db)+' | Check Management | '+RELEASE+(' | '+current['username'] if current else ''))
             messagebox.showinfo('Saved','Office information and coordinator details saved.',parent=self.parent)
         except (ValueError,sqlite3.Error) as error:
             messagebox.showerror('Cannot save office information',str(error),parent=self.parent)

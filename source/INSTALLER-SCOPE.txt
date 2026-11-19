@@ -1,21 +1,12 @@
-Pike County Worthless Check Unit - Windows Server Evaluation
-Deployment candidate 1.0.0-rc56
+Check Management - configurable office edition
+Release 1.0.0-rc64
 
-This installer is for Windows Server 2022 Datacenter with Desktop Experience.
-It installs a self-contained x64 desktop application for multiple Remote Desktop
-users on the same server, with separate local databases for Troy DA and Enterprise DA.
+Windows Server 2022 x64 Desktop Experience application with two separate local office workspaces and named staff accounts. No real records or passwords are bundled.
 
-The first Administrator setup includes fictional sample cases by default.
-No actual case records or passwords are included in this installer.
+Sign in as an application Administrator and open Office Information to enter your organization name, optional heading lines, workspace name, address and contact details. No DA, judicial circuit, Alabama or county heading is added automatically. Blank identity uses Check Management.
 
-This is an evaluation deployment, not an approved production cutover. Official
-fund distribution, specialized legal forms and the legacy-data exceptions still
-require verification. Read DEPLOYMENT-READ-ME.txt for setup and test instructions.
+This installer is not an authorized production cutover. It creates/ensures existing compatibility groups PikeCountyWCUsers (Office 1) and EnterpriseWCUsers (Office 2), and protects each office data folder. Existing installation/data identifiers are retained for compatible upgrades. Close sessions and preserve recovery copies before any approved update.
 
-The installer creates the local Windows groups PikeCountyWCUsers (Troy DA) and
-EnterpriseWCUsers (Enterprise DA). Assign staff to their division group and
-assign selected staff to both groups.
-Application users and passwords are managed separately inside the program.
+Standard receipt/report headings are configurable. Archived original agency legal forms and signatures are not reusable organization templates and cannot be rendered in this edition. Prepare and review organization-specific forms separately.
 
-Updates/uninstall preserve the shared evaluation database and its backups.
-Close all application sessions and take a backup before updating the software.
+First-run setup does not add fictional sample cases unless explicitly selected. Existing data, receipts, counters and pending reconciliation items are not changed by packaging this release.

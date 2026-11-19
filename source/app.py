@@ -262,7 +262,7 @@ class App:
         self.database_tools=database_ui.DatabaseUI(self)
         self.system_tools=system_tools.SystemTools(self)
         self.functions_tools=functions_ui.FunctionsUI(self)
-        root.title('Worthless Check Unit | Review Prototype')
+        root.title('Check Management | Review Prototype')
         root.geometry('1100x750')
         root.minsize(900,650)
         desktop_theme.apply(root)

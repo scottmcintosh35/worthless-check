@@ -741,7 +741,7 @@ def print_html(payload,folder,office_heading=None):
     if 'original_pages' in payload:
         path.write_text(original_print.html_document(payload['original_pages']),encoding='utf-8');return path
 
-    heading='<h2>Office of the District Attorney</h2><p>Twelfth Judicial Circuit · State of Alabama<br>Worthless Check Unit · Pike County</p>'
+    heading='<h2>Check Management</h2>'
 
     if office_heading:
         heading = '<h2>' + html.escape(office_heading).replace(chr(10), '<br>') + '</h2>'
@@ -966,7 +966,7 @@ class Center:
 
         if action=='layouts.configure':
             if divisions.database_division(self.db) == 'enterprise':
-                raise ValueError('Enterprise DA uses draft templates. The bundled original layouts are for Troy DA.')
+                raise ValueError('Office 2 uses draft templates. Imported original layouts require organization-specific review.')
             original_print.editor(self.db,self.win)
             return
 

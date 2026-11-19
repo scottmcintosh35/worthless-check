@@ -4,7 +4,7 @@ from ctypes import wintypes
 import os
 from pathlib import Path
 
-LABELS = {'troy': 'Troy DA', 'enterprise': 'Enterprise DA'}
+LABELS = {'troy': 'Office 1', 'enterprise': 'Office 2'}
 GROUPS = {'troy': 'PikeCountyWCUsers', 'enterprise': 'EnterpriseWCUsers'}
 DIRECTORIES = {'troy': 'Data', 'enterprise': 'EnterpriseData'}
 

@@ -1,10 +1,5 @@
 """Office heading shared by the application and printable documents."""
-HEADING = (
-    'Office of the District Attorney',
-    'Twelfth Judicial Circuit',
-    'State of Alabama',
-    'Worthless Check Unit - Pike County',
-)
+HEADING = ('Check Management',)
 HEADING_TEXT = '\n'.join(HEADING)
 
 

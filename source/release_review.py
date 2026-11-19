@@ -57,7 +57,7 @@ def settings_text(db):
     login.require(db, True)
     settings = users.get_settings(db)
     return '\n'.join([
-        f"Division: {divisions.LABELS[divisions.database_division(db)]}",
+        f"Workspace: {users.workspace_label(db)}",
         users.document_heading(db), users.document_contact(db), '',
         'New-case defaults',
         f"DA / warrant fee: ${settings['DA_FEE']}",

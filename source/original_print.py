@@ -224,6 +224,7 @@ def context_for(db,data,settings,check=None):
 
 
 def render_page(db,kind,data,check=None):
+ raise ValueError('These archived original forms contain agency-specific wording and signatures. Use standard receipts and reports; prepare and review organization-specific forms before using them.')
  settings=config(db,kind);source=library()['reports'][settings['report']];context=context_for(db,data,settings,check);objects=[];errors=[];warnings=[]
  for item in source['objects']:
   typ=item['OBJTYPE'];number=str(item['record'])
