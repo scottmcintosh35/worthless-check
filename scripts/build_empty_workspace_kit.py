@@ -46,7 +46,7 @@ def create_baseline(path):
     for suffix in ('-wal', '-shm', '-journal'):
         if Path(str(path) + suffix).exists():
             raise ValueError('Unexpected baseline sidecar: ' + suffix)
-    return {'Build': '1.0.0-rc64', 'Packaging': 'v2', 'SHA256': sha256(path),
+    return {'Build': '1.0.0-rc65', 'Packaging': 'v2', 'SHA256': sha256(path),
             'EmptyTableCounts': counts,
             'ReferenceData': 'Bundled bank, WC and ZIP reference lists remain.'}
 
@@ -57,20 +57,20 @@ def build_kit(installer, output):
         raise FileNotFoundError(installer)
     # Never merge with an old extraction containing sidecars or user records.
     output.mkdir(parents=True, exist_ok=False)
-    baseline = output / 'Empty-rc64.sqlite'
+    baseline = output / 'Empty-rc65.sqlite'
     evidence = create_baseline(baseline)
-    installer_name = 'Check-Management-Setup-rc64.exe'
+    installer_name = 'Worthless-Check-Setup-rc65.exe'
     shutil.copy2(installer, output / installer_name)
     evidence['InstallerSHA256'] = sha256(installer)
-    template = (ROOT / 'scripts/Start-rc64-Empty-Workspace.ps1').read_text(encoding='utf-8-sig')
+    template = (ROOT / 'scripts/Start-rc65-Empty-Workspace.ps1').read_text(encoding='utf-8-sig')
     launcher = template.replace('__EMPTY_SHA256__', evidence['SHA256']).replace(
         '__INSTALLER_SHA256__', evidence['InstallerSHA256'])
-    (output / 'Start-rc64-Empty-Workspace.ps1').write_text(launcher, encoding='utf-8-sig')
+    (output / 'Start-rc65-Empty-Workspace.ps1').write_text(launcher, encoding='utf-8-sig')
     (output / 'Empty-Workspace-Verification.json').write_text(json.dumps(evidence, indent=2))
     shutil.copy2(ROOT / 'docs/empty-workspace.md', output / 'README-Empty-Workspace.md')
-    allowed = ('Empty-rc64.sqlite', installer_name, 'Start-rc64-Empty-Workspace.ps1',
+    allowed = ('Empty-rc65.sqlite', installer_name, 'Start-rc65-Empty-Workspace.ps1',
                'Empty-Workspace-Verification.json', 'README-Empty-Workspace.md')
-    archive = output / 'Check-Management-rc64-Empty-Workspace-v2.zip'
+    archive = output / 'Worthless-Check-rc65-Empty-Workspace-v2.zip'
     with zipfile.ZipFile(archive, 'w', zipfile.ZIP_DEFLATED) as bundle:
         for name in allowed:
             bundle.write(output / name, name)
