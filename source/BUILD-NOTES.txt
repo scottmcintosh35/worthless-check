@@ -1,0 +1,28 @@
+REPRODUCIBLE SOURCE PACKAGE
+
+Build machine used: Windows 11 x64, Python 3.14.7, PyInstaller 6.22.3,
+pyinstaller-hooks-contrib 2026.9, Inno Setup 7.1.1 x64.
+
+The installer target is Windows Server 2022 x64 Desktop Experience. Actual target
+server and multi-session RDP acceptance tests remain to be completed.
+
+To rebuild on an x64 Windows build machine:
+1. Install Python 3.14 with Tcl/Tk and pip.
+2. Install PyInstaller 6.22.3 and its dependencies in a build environment.
+3. Install Inno Setup 7.1.1, or use its official portable compiler.
+4. Run Build-Windows.ps1, passing -InnoCompiler if the compiler is elsewhere.
+5. Output: build\installer\WC-Server2022-Setup-rc2.exe
+6. Run the generated desktop EXE with --self-test and an output JSON path.
+
+No real case database is part of this source or installer. The .json reference
+assets contain bank codes, WC code descriptions, ZIP/city/state data, report
+expressions and schema definitions. Credentials are created only at first run.
+
+The optional installer switch /EXTRACTONLY=1 is used for packaging validation.
+It skips Windows group/ACL setup, shortcuts and uninstall registration, extracting
+the payload only. This is not a replacement for normal administrative installation.
+Normal installation requires a server Administrator and configures the Windows
+group and shared data directory described in DEPLOYMENT-READ-ME.txt.
+
+The application is not signed. Configure an office-approved signing process and
+certificate before any signed production release; no private keys are supplied.

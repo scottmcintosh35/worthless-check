@@ -1,0 +1,13 @@
+THIRD-PARTY COMPONENTS
+
+This Windows deployment includes Python, its standard library, Tcl/Tk and SQLite,
+and uses the PyInstaller bootloader. License files are supplied in licenses/.
+
+Python: Python Software Foundation License, https://docs.python.org/3/license.html
+Tcl/Tk: Tcl/Tk license, https://www.tcl-lang.org/software/tcltk/license.html
+SQLite: public domain, https://sqlite.org/copyright.html
+PyInstaller: GPL with a bootloader exception allowing distribution of bundled
+applications under their own license, https://pyinstaller.org/en/stable/license.html
+
+The installer is built using Inno Setup by Jordan Russell and Martijn Laan:
+https://jrsoftware.org/. This application is not made or endorsed by those projects.

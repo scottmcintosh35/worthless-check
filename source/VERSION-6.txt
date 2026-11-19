@@ -1,0 +1,19 @@
+VERSION 6 - LETTER-SIZE RECEIPT PRINTING
+
+After recording a sample payment, click Print Receipt in its receipt window.
+The default browser opens a letter-size preview and its print dialog. Choose
+your printer, Letter (8.5 x 11 inches), portrait, and disable browser headers and
+footers. Confirm printing in the browser. If the dialog does not open, use the
+preview's Print button or press Ctrl+P.
+
+To reprint, select a case and open Payment history / receipt. The print button
+prints that case's receipts with each receipt starting on a separate page.
+Use the browser's page selection if only one receipt is wanted.
+
+Receipts remain clearly marked as DEMONSTRATION receipts. Printing does not post
+another payment or change receipt numbers. Actual legacy receipt reprints and
+official office layout/branding remain pending verification for the final version.
+
+Preview HTML files are kept in the receipt-previews folder beside the prototype
+database. The application opens a local file; it does not send receipts to a web
+service. Existing review limits and Server 2022 verification requirements apply.

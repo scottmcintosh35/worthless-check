@@ -1,0 +1,18 @@
+VERSION 10 - BANK CODES
+
+Open Database > Bank Codes. Search by code or bank name. Add Bank (Ctrl+N)
+creates a new entry; double-click to edit an entry or mark it inactive.
+
+All 446 BANKCODE.DBF entries from the supplied backup are included, with original
+codes, leading zeros and bank-name spelling. There are 399 distinct codes:
+multiple banks share some legacy codes. These entries are preserved separately,
+without renumbering or merging them. New entries cannot reuse an existing code.
+Names are not updated to current bank names because these are historical codes.
+
+New sample cases now include an optional Bank selector. The selected bank entry
+is stored with the case, including where multiple legacy banks share a code.
+Existing cases and imported case records are not relinked automatically.
+
+The directory loads automatically on first run and adds missing seed entries on
+later runs without replacing edits or inactive status. No reimport is needed.
+The imported legacy BANKCODE table remains unchanged and read-only.

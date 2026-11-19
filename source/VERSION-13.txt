@@ -1,0 +1,50 @@
+VERSION 13 - REMAINING SYSTEM MENU TOOLS
+
+System > About: version, office heading and active prototype database location.
+System > Calculator: decimal arithmetic using +, -, *, / and parentheses.
+System > Calendar/Diary: monthly calendar, dated notes/tasks, edit and completion.
+Diary entries are stored in the prototype database and shared by staff using that
+same database. There are no background reminders or notifications in this version.
+
+LOCAL LOGIN SETUP
+1. Use Users > Add User to create at least one active staff profile if needed.
+2. Choose System > Login to System. With no existing credentials, this creates
+   the first Administrator login for a selected active staff profile.
+3. Enter and confirm a password/passphrase of at least 12 characters.
+4. Once created, sign-in is required whenever the editable prototype is started.
+5. To enable another staff login: add the staff profile, then choose
+   System > Edit Login/Password > Set staff password / role. Choose an active user,
+   enter a password twice and assign Staff or Administrator.
+6. Users can change their own password using their current password.
+   Administrators can reset a staff password. No passwords can be viewed.
+7. Sign out / Switch user hides the editable application until a successful login.
+   Canceling that login closes the application.
+
+Usernames can be edited in the Users tab by an Administrator. Old passwords from
+the legacy SECURITY.DBF are not copied. There is no default/shared password.
+Until a first Administrator login is created, the earlier open demo behavior is
+retained to permit initial user setup. Keep the new Administrator password safe;
+there is no password recovery bypass in the application.
+
+ROLES
+Staff can enter sample cases, defendant/merchant profiles, payments and diary
+entries. Administrators also manage staff users, login roles, office settings,
+reference codes, numbering, charge adjustments, archive/void/restore operations,
+reindexing and optional custom columns. Both roles can read office records.
+Payment initials come from the signed-in staff profile. Mutation audit entries
+identify the signed-in username. At least one active Administrator must remain.
+Changes to passwords invalidate other existing sessions for that user.
+
+Password hashes use per-password random salts with PBKDF2-HMAC-SHA256 at 600,000
+iterations; plaintext passwords are not stored. Five unsuccessful login attempts
+temporarily block that account for five minutes. Local login protects normal
+application use; the SQLite file is not encrypted and OS file access still matters.
+This remains a review prototype, not a production security accreditation.
+Storage reference: https://cheatsheetseries.owasp.org/cheatsheets/Password_Storage_Cheat_Sheet.html
+
+Local logins apply to the editable prototype. Imported-record review remains a
+separate read-only tool and does not enforce these local prototype credentials.
+Production shared-server authentication and imported-data cutover remain separate
+final-version work. Existing records and printed receipt identifiers are retained.
+
+Extract this version and run Start-Prototype.cmd. No database reimport is needed.

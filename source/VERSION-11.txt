@@ -1,0 +1,20 @@
+VERSION 11 - WC CODES AND ZIP CODES
+
+Database > WC Codes now contains the 16 original WC_CODE.DBF entries.
+Database > Zip Codes now contains the 41,870 original AZIPS.DBF entries.
+Search WC codes by code or description. Search ZIP codes by ZIP, city or state.
+Use Next and Previous to page through long ZIP search results.
+Both directories support adding, editing and marking entries inactive.
+Original spelling and leading zeros are preserved. Edits survive later restarts.
+
+In a defendant profile, open Contact > Find ZIP / city, search, select an entry
+and click Use selected ZIP to fill ZIP, city and state. Save the profile to keep
+those changes. Existing profiles are not overwritten automatically.
+
+WC Codes are reference descriptions in this version; selecting or changing a
+reference code does not trigger payment, balance, court or warrant actions.
+Original spellings such as PERGED are retained until you choose to edit them.
+The ZIP list is the historical list from your backup, not a current postal feed.
+
+No reimport is needed. Run Start-Prototype.cmd after extracting this version.
+Imported legacy tables remain preserved and read-only.

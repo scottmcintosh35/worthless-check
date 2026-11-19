@@ -1,0 +1,34 @@
+VERSION 9 - STAFF USERS AND OFFICE INFORMATION
+
+ADD STAFF USERS
+Open the Users tab and click Add User, or choose System > Add User.
+Enter username, staff name, initials, position/title and active status. Save User.
+Double-click a user to edit or deactivate the profile. Usernames are unique
+without regard to letter case. Deactivating retains the record for review.
+
+USER INFORMATION FORM
+Open Office Information or System > User Information. The tabs include:
+- Office Information: DA name, county, circuit, two address lines, city, state,
+  ZIP, telephone and fax.
+- Coordinators: Administrative Assistant, Grand Jury, Victim Services,
+  Worthless Check and Post-Trial Restitution. Choose an active staff name or type
+  a coordinator's name directly.
+- Defaults: database backup folder and default Worthless Check DA fee.
+Click Save Office Information to persist the form.
+
+The DA fee pre-fills new sample cases; existing cases are not recalculated.
+The backup folder is used as the starting folder for the backup file picker.
+Saved county/circuit and address/contact details appear on demonstration receipts
+and collection summaries. The Alabama/Pike County application heading remains
+as previously requested. User information starts blank except county/circuit/state
+and a zero default fee; names and phone numbers from screenshots are not copied.
+
+STAFF PROFILES ARE NOT LOGIN ACCOUNTS IN THIS REVIEW VERSION.
+Sign-in, passwords and enforced permissions remain pending for the final version.
+Position/title does not grant access rights. Staff information is stored in the
+sample prototype database, separate from the read-only imported legacy database.
+Imported USER.DBF/SECURITY.DBF data is preserved but not automatically used to
+create staff profiles or credentials. Previous audit entries are unchanged.
+
+Extract WC-Prototype-v9.zip and run Start-Prototype.cmd. Existing prototype data
+is retained at the same local database location. No reimport is needed.

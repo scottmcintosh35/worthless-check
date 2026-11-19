@@ -1,0 +1,100 @@
+PIKE COUNTY WORTHLESS CHECK UNIT
+Windows Server deployment candidate 1.0.0-rc56
+
+System > User Activity Audit is available to signed-in Administrators.
+Choose a staff account and filter for opened items or other recorded activity.
+Each division shows its own activity. Access events begin with rc20.
+
+WHAT THIS INSTALLER DOES
+Installs a self-contained 64-bit Windows desktop application. Python and Tcl/Tk
+are bundled; staff do not install Python or run command files. Start the app from
+the Start menu or the optional desktop shortcut in each Remote Desktop session.
+
+TARGET
+Windows Server 2022 Datacenter, Desktop Experience, x64. Several staff members may
+use separate Remote Desktop sessions on the SAME server. All sessions connect to
+the assigned division's SQLite WAL database on that server's LOCAL disk. This is not a Windows service
+and does not provide an internet/browser endpoint or access from separate computers
+to a network-share database. Server Core is not supported by this desktop build.
+
+INSTALL AND ASSIGN ACCESS
+1. Run WC-Server2022-Setup-rc56.exe as a server administrator.
+2. Assign each Windows/RDP account to the appropriate local group from an
+   elevated command prompt. Replace DOMAIN and the usernames in these examples:
+     net localgroup PikeCountyWCUsers "DOMAIN\troystaff" /add
+     net localgroup EnterpriseWCUsers "DOMAIN\enterprisestaff" /add
+   Add approved dual-division staff to both groups. Existing PikeCountyWCUsers
+   memberships continue to grant Troy access. Review inherited/domain group
+   memberships as well as direct assignments.
+3. Staff sign out of Windows/RDP and sign in again to refresh group membership.
+   The assigned division opens by default. With both groups, choose Troy DA or
+   Enterprise DA in the login window. Either division requires its own
+   application login. Windows administrators can open both when elevated.
+4. For Enterprise first run, start the app elevated and select Enterprise DA.
+   Create its first application Administrator. The sample data box is off by
+   default for Enterprise. Enter the office information and create Enterprise
+   staff accounts there. A staff member who switches needs an account in each
+   division. Staff can use the application normally after setup.
+5. In Enterprise DA, select the Enterprise legacy export when ready to prepare
+   a working copy. Review the active division before loading data. Enterprise
+   starts with draft print templates. Verify Enterprise's own notices and forms.
+
+LOCAL DATA LOCATIONS
+Troy DA:       C:\ProgramData\PikeCountyWC-ServerEvaluation\Data\wc.sqlite
+Enterprise DA: C:\ProgramData\PikeCountyWC-ServerEvaluation\EnterpriseData\wc.sqlite
+Each division's Windows group has Modify access to its own folder. Windows
+Administrators and SYSTEM have Full Control. Application roles govern normal
+in-app actions. Group members have direct SQLite file access in their own
+division. Keep exports and manual backups in the correct restricted folder.
+
+SQLite -wal and -shm files may exist while staff are using the program. Take
+consistent backups through the app or through a coordinated server backup.
+Uninstall preserves both databases. The app starts and closes each division
+session separately. Close open dialogs and save edits before switching.
+
+TESTING
+The application has bundled-runtime checks. From an account allowed to write the
+chosen output location, run:
+  "C:\Program Files\Pike County Worthless Check Unit\PikeCountyWC.exe" --self-test "C:\YourTestFolder\result.json"
+This creates isolated fictional test data next to the result file. It does not
+modify the main application database. Inspect status=passed in result.json.
+The checks cover bundled assets, Administrator setup, payments/receipts, reports,
+labels, two concurrent authenticated connections, main windows, month snapshots
+and database integrity. This does not replace actual RDP/printer/server testing.
+
+BACKUPS AND RECOVERY
+Use Back up prototype database to take a consistent SQLite backup. Store backups
+in the office's controlled backup system. Maintenance backups remain beside the
+shared database. Before a software update, take a backup and have staff close the
+application. Do not restore an older database over a running session. Restoring a
+backup also restores its passwords, counters and snapshots; official receipt
+number recovery policies have not yet been approved for production use.
+
+CURRENT LIMITS - NOT A PRODUCTION CUTOVER
+This deployment candidate contains the implemented prototype functions, not a
+verified replacement for every legacy business rule. Reports and receipts retain
+their demonstration markings. Month-end is a local snapshot/close workflow; county
+fund allocation, merchant disbursement rules and specialized legal forms are not
+fully reproduced or approved. The original legacy records remain read-only and are
+not merged into this editable database. No actual case records or passwords are
+included in the installer.
+
+Legacy migration review identified malformed values/memo references and 9,076
+payment rows without a matching active case number. Those require reconciliation
+before final migration. Test multiple actual RDP accounts, concurrent operations,
+printer alignment, backup/restore and the Windows Server 2022 environment before
+considering live use. This build has not yet been run on your server.
+
+The installer and application are not Authenticode-signed by the office. A SHA-256
+manifest accompanies the build for your IT department to verify. No signing key
+or certificate was supplied. The database is not encrypted by this application;
+Windows account/group and server/storage administration remain important.
+
+The current shared build supports modest concurrent desktop use on one server;
+it has not undergone a staff-sized load test. Windows group members have direct
+file access to the SQLite database. This is not a service-tier security boundary.
+
+REFERENCES FOR THE BUILD
+PyInstaller: https://pyinstaller.org/
+Inno Setup: https://jrsoftware.org/
+SQLite WAL: https://sqlite.org/wal.html

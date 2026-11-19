@@ -1,0 +1,2678 @@
+[
+  {
+    "source_row": 1,
+    "deleted": false,
+    "CODE": "001",
+    "BANK": "BANK OF AMERICA"
+  },
+  {
+    "source_row": 2,
+    "deleted": false,
+    "CODE": "002",
+    "BANK": "FIRST ALABAMA BANK"
+  },
+  {
+    "source_row": 3,
+    "deleted": false,
+    "CODE": "003",
+    "BANK": "SOUTHTRUST BANK/WACHOVIA"
+  },
+  {
+    "source_row": 4,
+    "deleted": false,
+    "CODE": "004",
+    "BANK": "BRANTLEY BANK & TRUST CO."
+  },
+  {
+    "source_row": 5,
+    "deleted": false,
+    "CODE": "005",
+    "BANK": "REGIONS BANK"
+  },
+  {
+    "source_row": 6,
+    "deleted": false,
+    "CODE": "006",
+    "BANK": "COLONIAL BANK"
+  },
+  {
+    "source_row": 7,
+    "deleted": false,
+    "CODE": "007",
+    "BANK": "NATIONS BANK"
+  },
+  {
+    "source_row": 8,
+    "deleted": false,
+    "CODE": "08",
+    "BANK": "TROY BANK & TRUST"
+  },
+  {
+    "source_row": 9,
+    "deleted": false,
+    "CODE": "09",
+    "BANK": "COMMUNITY BANK & TRUST"
+  },
+  {
+    "source_row": 10,
+    "deleted": false,
+    "CODE": "10",
+    "BANK": "ARMY AVIATION CREDIT UNION"
+  },
+  {
+    "source_row": 11,
+    "deleted": false,
+    "CODE": "11",
+    "BANK": "COVINGTON COUNTY BANK"
+  },
+  {
+    "source_row": 12,
+    "deleted": false,
+    "CODE": "12",
+    "BANK": "AMSOUTH"
+  },
+  {
+    "source_row": 13,
+    "deleted": false,
+    "CODE": "13",
+    "BANK": "THE FIFTH THIRD BANK"
+  },
+  {
+    "source_row": 14,
+    "deleted": false,
+    "CODE": "14",
+    "BANK": "AMERICAN NATIONAL BANK"
+  },
+  {
+    "source_row": 15,
+    "deleted": false,
+    "CODE": "15",
+    "BANK": "FIRST NATIONAL BANK"
+  },
+  {
+    "source_row": 16,
+    "deleted": false,
+    "CODE": "16",
+    "BANK": "FARMERS EXCHANGE BANK"
+  },
+  {
+    "source_row": 17,
+    "deleted": false,
+    "CODE": "17",
+    "BANK": "BF GOODRICH CREDIT UNION"
+  },
+  {
+    "source_row": 18,
+    "deleted": false,
+    "CODE": "18",
+    "BANK": "PEOPLES BANK & TRUST"
+  },
+  {
+    "source_row": 19,
+    "deleted": false,
+    "CODE": "19",
+    "BANK": "THE PEOPLES BANK"
+  },
+  {
+    "source_row": 20,
+    "deleted": false,
+    "CODE": "20",
+    "BANK": "THE RAMER BANK"
+  },
+  {
+    "source_row": 21,
+    "deleted": false,
+    "CODE": "21",
+    "BANK": "BANK OF BREWTON"
+  },
+  {
+    "source_row": 22,
+    "deleted": false,
+    "CODE": "22",
+    "BANK": "FIRST TUSKEGEE BANK"
+  },
+  {
+    "source_row": 23,
+    "deleted": false,
+    "CODE": "23",
+    "BANK": "BANK OF MINGO"
+  },
+  {
+    "source_row": 24,
+    "deleted": false,
+    "CODE": "24",
+    "BANK": "COMPASS BANK"
+  },
+  {
+    "source_row": 25,
+    "deleted": false,
+    "CODE": "113",
+    "BANK": "GREAT WESTERN BANK"
+  },
+  {
+    "source_row": 26,
+    "deleted": false,
+    "CODE": "26",
+    "BANK": "CREDIT UNION OF KANSAS"
+  },
+  {
+    "source_row": 27,
+    "deleted": false,
+    "CODE": "27",
+    "BANK": "SUNTRUST BANK"
+  },
+  {
+    "source_row": 28,
+    "deleted": false,
+    "CODE": "28",
+    "BANK": "MAX FEDERAL CREDIT UNION"
+  },
+  {
+    "source_row": 29,
+    "deleted": false,
+    "CODE": "29",
+    "BANK": "FEDAPOSTAL CREDIT UNION"
+  },
+  {
+    "source_row": 30,
+    "deleted": false,
+    "CODE": "30",
+    "BANK": "FEDMONT FEDERAL CREDIT UNION"
+  },
+  {
+    "source_row": 31,
+    "deleted": false,
+    "CODE": "31",
+    "BANK": "FIRST GUARANTY BANK"
+  },
+  {
+    "source_row": 32,
+    "deleted": false,
+    "CODE": "32",
+    "BANK": "STERLING BANK"
+  },
+  {
+    "source_row": 33,
+    "deleted": false,
+    "CODE": "33",
+    "BANK": "SONY MAGNETIC PRODUCTS EMPLOY"
+  },
+  {
+    "source_row": 34,
+    "deleted": false,
+    "CODE": "34",
+    "BANK": "COMMERCIAL BANK OF OZARK"
+  },
+  {
+    "source_row": 35,
+    "deleted": false,
+    "CODE": "35",
+    "BANK": "FIRST LIBERTY BANK"
+  },
+  {
+    "source_row": 36,
+    "deleted": false,
+    "CODE": "36",
+    "BANK": "COMALA CREDIT UNION"
+  },
+  {
+    "source_row": 37,
+    "deleted": false,
+    "CODE": "38",
+    "BANK": "FIRST CITIZENS BANK"
+  },
+  {
+    "source_row": 38,
+    "deleted": false,
+    "CODE": "39",
+    "BANK": "MERCHANTS & FARMERS BANK"
+  },
+  {
+    "source_row": 39,
+    "deleted": false,
+    "CODE": "40",
+    "BANK": "MONTGOMERY VA CREDIT UNION"
+  },
+  {
+    "source_row": 40,
+    "deleted": false,
+    "CODE": "41",
+    "BANK": "THE CAMELLIA CITY BANK"
+  },
+  {
+    "source_row": 41,
+    "deleted": false,
+    "CODE": "42",
+    "BANK": "FSNB  ARMED SERVICES BANK"
+  },
+  {
+    "source_row": 42,
+    "deleted": false,
+    "CODE": "43",
+    "BANK": "CENTURY BANK & TRUST"
+  },
+  {
+    "source_row": 43,
+    "deleted": false,
+    "CODE": "44",
+    "BANK": "MARINE FEDERAL CREDIT UNION"
+  },
+  {
+    "source_row": 44,
+    "deleted": false,
+    "CODE": "37",
+    "BANK": "FIRST STATE BANK"
+  },
+  {
+    "source_row": 45,
+    "deleted": false,
+    "CODE": "45",
+    "BANK": "PEACHTREE BANK"
+  },
+  {
+    "source_row": 46,
+    "deleted": false,
+    "CODE": "46",
+    "BANK": "ALABAMA NATIONAL GUARD CREDIT"
+  },
+  {
+    "source_row": 47,
+    "deleted": false,
+    "CODE": "47",
+    "BANK": "DISCOVER"
+  },
+  {
+    "source_row": 48,
+    "deleted": false,
+    "CODE": "48",
+    "BANK": "MIDFLORIDA SCHOOL CREDIT UNION"
+  },
+  {
+    "source_row": 49,
+    "deleted": false,
+    "CODE": "49",
+    "BANK": "NAVY FEDERAL CREDIT UNION"
+  },
+  {
+    "source_row": 50,
+    "deleted": false,
+    "CODE": "120",
+    "BANK": "CITY BANK OF HARTFORD"
+  },
+  {
+    "source_row": 51,
+    "deleted": false,
+    "CODE": "50",
+    "BANK": "FIRST FEDERAL SAVINGS & LOAN"
+  },
+  {
+    "source_row": 52,
+    "deleted": false,
+    "CODE": "51",
+    "BANK": "PEOPLES BANK OF NORTH ALABAMA"
+  },
+  {
+    "source_row": 53,
+    "deleted": false,
+    "CODE": "52",
+    "BANK": "BANK OF PRATTVILLE"
+  },
+  {
+    "source_row": 54,
+    "deleted": false,
+    "CODE": "53",
+    "BANK": "JAX NAVY CREDIT UNION"
+  },
+  {
+    "source_row": 55,
+    "deleted": false,
+    "CODE": "55",
+    "BANK": "U.S. BANK"
+  },
+  {
+    "source_row": 56,
+    "deleted": false,
+    "CODE": "54",
+    "BANK": "FIVE STAR CREDIT UNION"
+  },
+  {
+    "source_row": 57,
+    "deleted": false,
+    "CODE": "57",
+    "BANK": "THE CITIZENS BANK"
+  },
+  {
+    "source_row": 58,
+    "deleted": false,
+    "CODE": "110",
+    "BANK": "FORT JACKSON CREDIT UNION"
+  },
+  {
+    "source_row": 59,
+    "deleted": false,
+    "CODE": "56",
+    "BANK": "EUFAULA BANK & TRUST"
+  },
+  {
+    "source_row": 60,
+    "deleted": false,
+    "CODE": "58",
+    "BANK": "GATEWAY PLAZA"
+  },
+  {
+    "source_row": 61,
+    "deleted": false,
+    "CODE": "59",
+    "BANK": "CAPITAL CITY BANK"
+  },
+  {
+    "source_row": 62,
+    "deleted": false,
+    "CODE": "60",
+    "BANK": "FIRST PORT CITY BANK"
+  },
+  {
+    "source_row": 63,
+    "deleted": false,
+    "CODE": "61",
+    "BANK": "HEALTH CREDIT UNION"
+  },
+  {
+    "source_row": 64,
+    "deleted": false,
+    "CODE": "62",
+    "BANK": "PEOPLES COMMUNITY BANK"
+  },
+  {
+    "source_row": 65,
+    "deleted": false,
+    "CODE": "63",
+    "BANK": "TMH FEDERAL CREDIT UNION"
+  },
+  {
+    "source_row": 66,
+    "deleted": false,
+    "CODE": "64",
+    "BANK": "METRO BANK"
+  },
+  {
+    "source_row": 67,
+    "deleted": false,
+    "CODE": "65",
+    "BANK": "CITIZENS BANK"
+  },
+  {
+    "source_row": 68,
+    "deleted": false,
+    "CODE": "66",
+    "BANK": "TALLAHASSEE CREDIT UNION"
+  },
+  {
+    "source_row": 69,
+    "deleted": false,
+    "CODE": "67",
+    "BANK": "FIRST SOUTH"
+  },
+  {
+    "source_row": 70,
+    "deleted": false,
+    "CODE": "25",
+    "BANK": "THE HEADLAND BANK"
+  },
+  {
+    "source_row": 71,
+    "deleted": false,
+    "CODE": "130",
+    "BANK": "THE COMMUNITY BANK"
+  },
+  {
+    "source_row": 72,
+    "deleted": false,
+    "CODE": "68",
+    "BANK": "CULLMAN SAVINGS BANK"
+  },
+  {
+    "source_row": 73,
+    "deleted": false,
+    "CODE": "69",
+    "BANK": "UNITED BANK"
+  },
+  {
+    "source_row": 74,
+    "deleted": false,
+    "CODE": "70",
+    "BANK": "FIRST COMMUNITY BANK"
+  },
+  {
+    "source_row": 75,
+    "deleted": false,
+    "CODE": "114",
+    "BANK": "SINGING RIVER FEDERAL CREDIT U"
+  },
+  {
+    "source_row": 76,
+    "deleted": false,
+    "CODE": "125",
+    "BANK": "HANCOCK BANK"
+  },
+  {
+    "source_row": 77,
+    "deleted": false,
+    "CODE": "71",
+    "BANK": "AMERIFIRST BANK"
+  },
+  {
+    "source_row": 78,
+    "deleted": false,
+    "CODE": "72",
+    "BANK": "BRUNDIDGE BANKING COMPANY"
+  },
+  {
+    "source_row": 79,
+    "deleted": false,
+    "CODE": "73",
+    "BANK": "COLORADO NATIONAL BANK"
+  },
+  {
+    "source_row": 80,
+    "deleted": false,
+    "CODE": "74",
+    "BANK": "ROYAL FEDERAL CREDIT UNION"
+  },
+  {
+    "source_row": 81,
+    "deleted": false,
+    "CODE": "115",
+    "BANK": "FIRST OF AMERICA"
+  },
+  {
+    "source_row": 82,
+    "deleted": false,
+    "CODE": "76",
+    "BANK": "MARRIOTT EMPOLYEES CREDIT UNIO"
+  },
+  {
+    "source_row": 83,
+    "deleted": false,
+    "CODE": "77",
+    "BANK": "MIDWEST FEDERAL CREDIT UNION"
+  },
+  {
+    "source_row": 84,
+    "deleted": false,
+    "CODE": "78",
+    "BANK": "FIRST UNION NATIONAL BANK"
+  },
+  {
+    "source_row": 85,
+    "deleted": false,
+    "CODE": "79",
+    "BANK": "BARBOUR COUNTY BANK"
+  },
+  {
+    "source_row": 86,
+    "deleted": false,
+    "CODE": "109",
+    "BANK": "SOUTHERN BANK"
+  },
+  {
+    "source_row": 87,
+    "deleted": false,
+    "CODE": "80",
+    "BANK": "FIRST LOWNDES BANK"
+  },
+  {
+    "source_row": 88,
+    "deleted": false,
+    "CODE": "81",
+    "BANK": "BENCO CREDIT UNION"
+  },
+  {
+    "source_row": 89,
+    "deleted": false,
+    "CODE": "82",
+    "BANK": "FARMERS NATIONAL BANK"
+  },
+  {
+    "source_row": 90,
+    "deleted": false,
+    "CODE": "83",
+    "BANK": "MERCHANTS & PLANTERS BANK"
+  },
+  {
+    "source_row": 91,
+    "deleted": false,
+    "CODE": "84",
+    "BANK": "FARMERS AND MERCHANTS BANK"
+  },
+  {
+    "source_row": 92,
+    "deleted": false,
+    "CODE": "85",
+    "BANK": "PHILLIPS 66"
+  },
+  {
+    "source_row": 93,
+    "deleted": false,
+    "CODE": "075",
+    "BANK": "ALABAMA MENTAL HEALTH CREDIT"
+  },
+  {
+    "source_row": 94,
+    "deleted": false,
+    "CODE": "86",
+    "BANK": "MONTGOMERY TEACHERS CREDIT UNI"
+  },
+  {
+    "source_row": 95,
+    "deleted": false,
+    "CODE": "90",
+    "BANK": "ALABAMA STATE EMPLOYEES"
+  },
+  {
+    "source_row": 96,
+    "deleted": false,
+    "CODE": "91",
+    "BANK": "HIGHLAND HOME BANK"
+  },
+  {
+    "source_row": 97,
+    "deleted": false,
+    "CODE": "92",
+    "BANK": "WACHOVIA BANK"
+  },
+  {
+    "source_row": 98,
+    "deleted": false,
+    "CODE": "93",
+    "BANK": "FIRST BANK"
+  },
+  {
+    "source_row": 99,
+    "deleted": false,
+    "CODE": "87",
+    "BANK": "BANK OF ST. FRANCISVILLE"
+  },
+  {
+    "source_row": 100,
+    "deleted": false,
+    "CODE": "94",
+    "BANK": "SERVICE FEDERAL CREDIT UNION"
+  },
+  {
+    "source_row": 101,
+    "deleted": false,
+    "CODE": "95",
+    "BANK": "FT. CAMPBELL CREDIT UNION"
+  },
+  {
+    "source_row": 102,
+    "deleted": false,
+    "CODE": "96",
+    "BANK": "CRESTAR BANK"
+  },
+  {
+    "source_row": 103,
+    "deleted": false,
+    "CODE": "111",
+    "BANK": "SOUTHLAND BANK"
+  },
+  {
+    "source_row": 104,
+    "deleted": false,
+    "CODE": "97",
+    "BANK": "USAA FEDERAL SAVINGS BANK"
+  },
+  {
+    "source_row": 105,
+    "deleted": false,
+    "CODE": "98",
+    "BANK": "BARNETT BANK"
+  },
+  {
+    "source_row": 106,
+    "deleted": false,
+    "CODE": "99",
+    "BANK": "CORDELE BANKING COMPANY"
+  },
+  {
+    "source_row": 107,
+    "deleted": false,
+    "CODE": "88",
+    "BANK": "ROBINS FEDERAL CREDIT UNION"
+  },
+  {
+    "source_row": 108,
+    "deleted": false,
+    "CODE": "100",
+    "BANK": "BARTOW COUNTY BANK"
+  },
+  {
+    "source_row": 109,
+    "deleted": false,
+    "CODE": "101",
+    "BANK": "BANK OF ALABAMA"
+  },
+  {
+    "source_row": 110,
+    "deleted": false,
+    "CODE": "102",
+    "BANK": "CITIZENS NATIONAL BANK"
+  },
+  {
+    "source_row": 111,
+    "deleted": false,
+    "CODE": "103",
+    "BANK": "THE BANK OF HARRISBURG"
+  },
+  {
+    "source_row": 112,
+    "deleted": false,
+    "CODE": "89",
+    "BANK": "FIRST AMERICAN NATIONAL BANK"
+  },
+  {
+    "source_row": 113,
+    "deleted": false,
+    "CODE": "104",
+    "BANK": "IRCO COMMUNITY CREDIT UNION"
+  },
+  {
+    "source_row": 114,
+    "deleted": false,
+    "CODE": "105",
+    "BANK": "CORESTATES BANK"
+  },
+  {
+    "source_row": 115,
+    "deleted": false,
+    "CODE": "106",
+    "BANK": "FEDERAL EMPLOYEES CREDIT UNION"
+  },
+  {
+    "source_row": 116,
+    "deleted": false,
+    "CODE": "107",
+    "BANK": "ALABAMA EXCHANGE BANK"
+  },
+  {
+    "source_row": 117,
+    "deleted": false,
+    "CODE": "116",
+    "BANK": "THE MARATHON BANK"
+  },
+  {
+    "source_row": 118,
+    "deleted": false,
+    "CODE": "108",
+    "BANK": "VFW CREDIT ASSOCIATION, FCU"
+  },
+  {
+    "source_row": 119,
+    "deleted": false,
+    "CODE": "119",
+    "BANK": "BANK OF CAMILLA"
+  },
+  {
+    "source_row": 120,
+    "deleted": false,
+    "CODE": "128",
+    "BANK": "IAM FEDERAL CREDIT UNION"
+  },
+  {
+    "source_row": 121,
+    "deleted": false,
+    "CODE": "117",
+    "BANK": "BANK OF THE SOUTH"
+  },
+  {
+    "source_row": 122,
+    "deleted": false,
+    "CODE": "118",
+    "BANK": "LINCOLN COUNTY BANK"
+  },
+  {
+    "source_row": 123,
+    "deleted": false,
+    "CODE": "127",
+    "BANK": "FLEET"
+  },
+  {
+    "source_row": 124,
+    "deleted": false,
+    "CODE": "123",
+    "BANK": "ETOWAH STEELWORKER"
+  },
+  {
+    "source_row": 125,
+    "deleted": false,
+    "CODE": "121",
+    "BANK": "COLUMBUS BANK & TRUST"
+  },
+  {
+    "source_row": 126,
+    "deleted": false,
+    "CODE": "126",
+    "BANK": "FIRSTMERIT"
+  },
+  {
+    "source_row": 127,
+    "deleted": false,
+    "CODE": "122",
+    "BANK": "EDUCATION CREDIT UNION"
+  },
+  {
+    "source_row": 128,
+    "deleted": false,
+    "CODE": "112",
+    "BANK": "ASSOCIATES NATIONAL BANK"
+  },
+  {
+    "source_row": 129,
+    "deleted": false,
+    "CODE": "124",
+    "BANK": "FIRST EDUCATORS CREDIT UNION"
+  },
+  {
+    "source_row": 130,
+    "deleted": false,
+    "CODE": "131",
+    "BANK": "WASHINGTON MUTUAL"
+  },
+  {
+    "source_row": 131,
+    "deleted": false,
+    "CODE": "132",
+    "BANK": "WELLS FARGO BANK"
+  },
+  {
+    "source_row": 132,
+    "deleted": false,
+    "CODE": "129",
+    "BANK": "INDIANA UNIVERSITY CREDIT UNIO"
+  },
+  {
+    "source_row": 133,
+    "deleted": false,
+    "CODE": "133",
+    "BANK": "FIFTH THIRD BANK"
+  },
+  {
+    "source_row": 134,
+    "deleted": false,
+    "CODE": "134",
+    "BANK": "UNIVERSITY FEDERAL CREDIT UNIO"
+  },
+  {
+    "source_row": 135,
+    "deleted": false,
+    "CODE": "135",
+    "BANK": "WASHINGTON HILL CREDIT UNION"
+  },
+  {
+    "source_row": 136,
+    "deleted": false,
+    "CODE": "137",
+    "BANK": "ARMED FORCES BANK"
+  },
+  {
+    "source_row": 137,
+    "deleted": false,
+    "CODE": "138",
+    "BANK": "CBS BANK"
+  },
+  {
+    "source_row": 138,
+    "deleted": false,
+    "CODE": "138",
+    "BANK": "FORT SILL NATIONAL BANK"
+  },
+  {
+    "source_row": 139,
+    "deleted": false,
+    "CODE": "139",
+    "BANK": "ASSOCIATED FEDERAL CREDIT UNIO"
+  },
+  {
+    "source_row": 140,
+    "deleted": false,
+    "CODE": "140",
+    "BANK": "PEOPLES BANK OF GRACEVILLE"
+  },
+  {
+    "source_row": 141,
+    "deleted": false,
+    "CODE": "141",
+    "BANK": "CENTRAL STATE BANK"
+  },
+  {
+    "source_row": 142,
+    "deleted": false,
+    "CODE": "142",
+    "BANK": "FORT HOOD NATIONAL BANK"
+  },
+  {
+    "source_row": 143,
+    "deleted": false,
+    "CODE": "143",
+    "BANK": "GILMAN UNITED CREDIT UNION"
+  },
+  {
+    "source_row": 144,
+    "deleted": false,
+    "CODE": "145",
+    "BANK": "FIRST TENNESSEE BANK"
+  },
+  {
+    "source_row": 145,
+    "deleted": false,
+    "CODE": "146",
+    "BANK": "APCO EMPLOYEES CREDIT UNION"
+  },
+  {
+    "source_row": 146,
+    "deleted": false,
+    "CODE": "133",
+    "BANK": "MONTGOMERY CO EMPLOYEES CREDIT"
+  },
+  {
+    "source_row": 147,
+    "deleted": false,
+    "CODE": "147",
+    "BANK": "AMERICA'S FIRST FEDERAL CREDIT"
+  },
+  {
+    "source_row": 148,
+    "deleted": false,
+    "CODE": "149",
+    "BANK": "SOUTHERN FEDERAL CREDIT UNION"
+  },
+  {
+    "source_row": 149,
+    "deleted": false,
+    "CODE": "321",
+    "BANK": "STATE EMPLOYEES CREDIT UNION"
+  },
+  {
+    "source_row": 150,
+    "deleted": false,
+    "CODE": "149",
+    "BANK": "BANK OF CANEYVILLE"
+  },
+  {
+    "source_row": 151,
+    "deleted": false,
+    "CODE": "150",
+    "BANK": "ROBINSON HUMPHREY COMPANY"
+  },
+  {
+    "source_row": 152,
+    "deleted": false,
+    "CODE": "79",
+    "BANK": "ALASKA USA CREDIT UNION"
+  },
+  {
+    "source_row": 153,
+    "deleted": false,
+    "CODE": "89",
+    "BANK": "FIRST ADVANTAGE FEDERAL C.U."
+  },
+  {
+    "source_row": 154,
+    "deleted": false,
+    "CODE": "67",
+    "BANK": "UNION PLANTERS BANK"
+  },
+  {
+    "source_row": 155,
+    "deleted": false,
+    "CODE": "120",
+    "BANK": "ANDROSCOGGIN BANK, NA"
+  },
+  {
+    "source_row": 156,
+    "deleted": false,
+    "CODE": "151",
+    "BANK": "TIC FEDERAL CREDIT UNION"
+  },
+  {
+    "source_row": 157,
+    "deleted": false,
+    "CODE": "152",
+    "BANK": "CROSS COUNTRY BANK"
+  },
+  {
+    "source_row": 158,
+    "deleted": false,
+    "CODE": "63",
+    "BANK": "AMERICAN BANK, GENEVA"
+  },
+  {
+    "source_row": 159,
+    "deleted": false,
+    "CODE": "160",
+    "BANK": "NORTHERN TRUST CO."
+  },
+  {
+    "source_row": 160,
+    "deleted": false,
+    "CODE": "153",
+    "BANK": "MERCHANTS & MARINE BANK"
+  },
+  {
+    "source_row": 161,
+    "deleted": false,
+    "CODE": "154",
+    "BANK": "CB&T BANK OF RUSSELL COUNTY"
+  },
+  {
+    "source_row": 162,
+    "deleted": false,
+    "CODE": "175",
+    "BANK": "GREENWOOD TRUST COMPANY"
+  },
+  {
+    "source_row": 163,
+    "deleted": false,
+    "CODE": "180",
+    "BANK": "IBEW PLUS CREDIT UNION"
+  },
+  {
+    "source_row": 164,
+    "deleted": false,
+    "CODE": "156",
+    "BANK": "EAGLE BANK"
+  },
+  {
+    "source_row": 165,
+    "deleted": false,
+    "CODE": "156",
+    "BANK": "TUCKER FEDERAL BANK"
+  },
+  {
+    "source_row": 166,
+    "deleted": false,
+    "CODE": "157",
+    "BANK": "MBNA AMERICA"
+  },
+  {
+    "source_row": 167,
+    "deleted": false,
+    "CODE": "158",
+    "BANK": "PEOPLES NATIONAL BANK"
+  },
+  {
+    "source_row": 168,
+    "deleted": false,
+    "CODE": "159",
+    "BANK": "FIRST CITY BANK"
+  },
+  {
+    "source_row": 169,
+    "deleted": false,
+    "CODE": "161",
+    "BANK": "THE BANK OF BONIFAY"
+  },
+  {
+    "source_row": 170,
+    "deleted": false,
+    "CODE": "161",
+    "BANK": "TENNESSEE VALLEY CREDIT UNION"
+  },
+  {
+    "source_row": 171,
+    "deleted": false,
+    "CODE": "162",
+    "BANK": "PREMIER BANK"
+  },
+  {
+    "source_row": 172,
+    "deleted": false,
+    "CODE": "163",
+    "BANK": "REDSTONE FEDERAL CREDIT UNION"
+  },
+  {
+    "source_row": 173,
+    "deleted": false,
+    "CODE": "164",
+    "BANK": "THE BANK OF EDISON"
+  },
+  {
+    "source_row": 174,
+    "deleted": false,
+    "CODE": "165",
+    "BANK": "MUTUAL SAVINGS CREDIT UNION"
+  },
+  {
+    "source_row": 175,
+    "deleted": false,
+    "CODE": "166",
+    "BANK": "AUBURNBANK"
+  },
+  {
+    "source_row": 176,
+    "deleted": false,
+    "CODE": "167",
+    "BANK": "WHITNEY NATIONAL BANK"
+  },
+  {
+    "source_row": 177,
+    "deleted": false,
+    "CODE": "168",
+    "BANK": "VIDALIA FEDERAL"
+  },
+  {
+    "source_row": 178,
+    "deleted": false,
+    "CODE": "169",
+    "BANK": "SWEET WATER STATE BANK"
+  },
+  {
+    "source_row": 179,
+    "deleted": false,
+    "CODE": "171",
+    "BANK": "TCF NATIONAL BANK"
+  },
+  {
+    "source_row": 180,
+    "deleted": false,
+    "CODE": "171",
+    "BANK": "CHESSIE FEDERAL CREDIT UNION"
+  },
+  {
+    "source_row": 181,
+    "deleted": false,
+    "CODE": "172",
+    "BANK": "FORT BRAGG CREDIT UNION"
+  },
+  {
+    "source_row": 182,
+    "deleted": false,
+    "CODE": "173",
+    "BANK": "MACO EDUCATORS CREDIT UNION"
+  },
+  {
+    "source_row": 183,
+    "deleted": false,
+    "CODE": "175",
+    "BANK": "COMMERCIAL NATIONAL BANK"
+  },
+  {
+    "source_row": 184,
+    "deleted": false,
+    "CODE": "176",
+    "BANK": "TEXAS BAY AREA CREDIT UNION"
+  },
+  {
+    "source_row": 185,
+    "deleted": false,
+    "CODE": "177",
+    "BANK": "DESTIN BANK"
+  },
+  {
+    "source_row": 186,
+    "deleted": false,
+    "CODE": "168",
+    "BANK": "EGLIN FEDERAL CREDIT UNION"
+  },
+  {
+    "source_row": 187,
+    "deleted": false,
+    "CODE": "169",
+    "BANK": "CAPE CORAL NATIONAL BANK"
+  },
+  {
+    "source_row": 188,
+    "deleted": false,
+    "CODE": "178",
+    "BANK": "PEN AIR FEDERAL CREDIT UNION"
+  },
+  {
+    "source_row": 189,
+    "deleted": false,
+    "CODE": "179",
+    "BANK": "BANK OF TUSCALOOSA"
+  },
+  {
+    "source_row": 190,
+    "deleted": false,
+    "CODE": "180",
+    "BANK": "VANGUARD BANK"
+  },
+  {
+    "source_row": 191,
+    "deleted": false,
+    "CODE": "181",
+    "BANK": "GTE FEDERAL CREDIT UNION"
+  },
+  {
+    "source_row": 192,
+    "deleted": false,
+    "CODE": "182",
+    "BANK": "ALABAMA TELCO CREDIT UNION"
+  },
+  {
+    "source_row": 193,
+    "deleted": false,
+    "CODE": "183",
+    "BANK": "CODE CREDIT UNION"
+  },
+  {
+    "source_row": 194,
+    "deleted": false,
+    "CODE": "184",
+    "BANK": "BANCO POPULAR"
+  },
+  {
+    "source_row": 195,
+    "deleted": false,
+    "CODE": "185",
+    "BANK": "U OF I EMPLOYEES CREDIT UNION"
+  },
+  {
+    "source_row": 196,
+    "deleted": false,
+    "CODE": "186",
+    "BANK": "MEDICAL SERVICES CREDIT UNION"
+  },
+  {
+    "source_row": 197,
+    "deleted": false,
+    "CODE": "187",
+    "BANK": "BANCORP SOUTH"
+  },
+  {
+    "source_row": 198,
+    "deleted": false,
+    "CODE": "188",
+    "BANK": "SCOTT CREDIT UNION"
+  },
+  {
+    "source_row": 199,
+    "deleted": false,
+    "CODE": "189",
+    "BANK": "ALIANT BANK"
+  },
+  {
+    "source_row": 200,
+    "deleted": false,
+    "CODE": "190",
+    "BANK": "OLD KENT BANK, HOLLAND"
+  },
+  {
+    "source_row": 201,
+    "deleted": false,
+    "CODE": "191",
+    "BANK": "CAPITAL ONE"
+  },
+  {
+    "source_row": 202,
+    "deleted": false,
+    "CODE": "191",
+    "BANK": "BANK ONE"
+  },
+  {
+    "source_row": 203,
+    "deleted": false,
+    "CODE": "191",
+    "BANK": "PARRIS ISLAND ARMED SERVICES"
+  },
+  {
+    "source_row": 204,
+    "deleted": false,
+    "CODE": "192",
+    "BANK": "PEOPLES INDEPENDENT BANK"
+  },
+  {
+    "source_row": 205,
+    "deleted": false,
+    "CODE": "193",
+    "BANK": "SUPERIOR FEDERAL BANK"
+  },
+  {
+    "source_row": 206,
+    "deleted": false,
+    "CODE": "194",
+    "BANK": "MARKETPLACE BANK"
+  },
+  {
+    "source_row": 207,
+    "deleted": false,
+    "CODE": "195",
+    "BANK": "FIRST WESTERN NATIONAL BANK"
+  },
+  {
+    "source_row": 208,
+    "deleted": false,
+    "CODE": "196",
+    "BANK": "FIRST CONSUMERS NATIONAL BANK"
+  },
+  {
+    "source_row": 209,
+    "deleted": false,
+    "CODE": "197",
+    "BANK": "BUCKLEY FEDERAL CREDIT UNION"
+  },
+  {
+    "source_row": 210,
+    "deleted": false,
+    "CODE": "198",
+    "BANK": "BANK INDEPENDENT"
+  },
+  {
+    "source_row": 211,
+    "deleted": false,
+    "CODE": "199",
+    "BANK": "VALLEY NATIONAL"
+  },
+  {
+    "source_row": 212,
+    "deleted": false,
+    "CODE": "200",
+    "BANK": "RIGGS BANK"
+  },
+  {
+    "source_row": 213,
+    "deleted": false,
+    "CODE": "201",
+    "BANK": "GREAT LAKES BANK"
+  },
+  {
+    "source_row": 214,
+    "deleted": false,
+    "CODE": "202",
+    "BANK": "THE NORTHERN TRUST COMPANY"
+  },
+  {
+    "source_row": 215,
+    "deleted": false,
+    "CODE": "203",
+    "BANK": "CHEVY CHASE BANK"
+  },
+  {
+    "source_row": 216,
+    "deleted": false,
+    "CODE": "200",
+    "BANK": "HEADLAND NATIONAL BANK"
+  },
+  {
+    "source_row": 217,
+    "deleted": false,
+    "CODE": "201",
+    "BANK": "THE BANK SAMSOM"
+  },
+  {
+    "source_row": 218,
+    "deleted": false,
+    "CODE": "204",
+    "BANK": "THE BANK OF OPP"
+  },
+  {
+    "source_row": 219,
+    "deleted": false,
+    "CODE": "205",
+    "BANK": "COMMERCIAL STATE BANK"
+  },
+  {
+    "source_row": 220,
+    "deleted": false,
+    "CODE": "206",
+    "BANK": "THE SAMSON BANKING COMPANY"
+  },
+  {
+    "source_row": 221,
+    "deleted": false,
+    "CODE": "207",
+    "BANK": "FLORIDA COMMERCE"
+  },
+  {
+    "source_row": 222,
+    "deleted": false,
+    "CODE": "208",
+    "BANK": "MERCHANTS BANK"
+  },
+  {
+    "source_row": 223,
+    "deleted": false,
+    "CODE": "209",
+    "BANK": "FAMILY SECURITY CREDIT UNION"
+  },
+  {
+    "source_row": 224,
+    "deleted": false,
+    "CODE": "210",
+    "BANK": "HUNTSVILLE TEACHERS CREDIT UNI"
+  },
+  {
+    "source_row": 225,
+    "deleted": false,
+    "CODE": "211",
+    "BANK": "THE BANK OF KINSTON"
+  },
+  {
+    "source_row": 226,
+    "deleted": false,
+    "CODE": "212",
+    "BANK": "NETBANK"
+  },
+  {
+    "source_row": 227,
+    "deleted": false,
+    "CODE": "213",
+    "BANK": "THE BANK OF ANDALUSIA"
+  },
+  {
+    "source_row": 228,
+    "deleted": false,
+    "CODE": "213",
+    "BANK": "NATIONAL CITY BANK"
+  },
+  {
+    "source_row": 229,
+    "deleted": false,
+    "CODE": "214",
+    "BANK": "AZALEA CITY CREDIT UNION"
+  },
+  {
+    "source_row": 230,
+    "deleted": false,
+    "CODE": "215",
+    "BANK": "STATE FEDERAL CREDIT UNION"
+  },
+  {
+    "source_row": 231,
+    "deleted": false,
+    "CODE": "216",
+    "BANK": "BANK OF GRANDIN"
+  },
+  {
+    "source_row": 232,
+    "deleted": false,
+    "CODE": "217",
+    "BANK": "COMPUBANK"
+  },
+  {
+    "source_row": 233,
+    "deleted": false,
+    "CODE": "263",
+    "BANK": "GEORGIA FEDERAL CREDIT UNION"
+  },
+  {
+    "source_row": 234,
+    "deleted": false,
+    "CODE": "218",
+    "BANK": "STPAUL FEDERAL"
+  },
+  {
+    "source_row": 235,
+    "deleted": false,
+    "CODE": "219",
+    "BANK": "CENTURYSOUTH BANK"
+  },
+  {
+    "source_row": 236,
+    "deleted": false,
+    "CODE": "220",
+    "BANK": "ALABAMA TRUST"
+  },
+  {
+    "source_row": 237,
+    "deleted": false,
+    "CODE": "221",
+    "BANK": "DEKALB BANK"
+  },
+  {
+    "source_row": 238,
+    "deleted": false,
+    "CODE": "222",
+    "BANK": "CITIZENS TRUST BANK"
+  },
+  {
+    "source_row": 239,
+    "deleted": false,
+    "CODE": "223",
+    "BANK": "INTRUST BANK"
+  },
+  {
+    "source_row": 240,
+    "deleted": false,
+    "CODE": "223",
+    "BANK": "VISION BANK"
+  },
+  {
+    "source_row": 241,
+    "deleted": false,
+    "CODE": "224",
+    "BANK": "BANK OF PARRISH"
+  },
+  {
+    "source_row": 242,
+    "deleted": false,
+    "CODE": "225",
+    "BANK": "FIRST FEDERAL BANK"
+  },
+  {
+    "source_row": 243,
+    "deleted": false,
+    "CODE": "226",
+    "BANK": "PEOPLES EXCHANGE BANK"
+  },
+  {
+    "source_row": 244,
+    "deleted": false,
+    "CODE": "100",
+    "BANK": "THE SAMSON BANKING COMPANY"
+  },
+  {
+    "source_row": 245,
+    "deleted": false,
+    "CODE": "101",
+    "BANK": "FIRST COMMAND BANK"
+  },
+  {
+    "source_row": 246,
+    "deleted": false,
+    "CODE": "227",
+    "BANK": "GOV. EMP. CREDIT UNION OF FLOR"
+  },
+  {
+    "source_row": 247,
+    "deleted": false,
+    "CODE": "228",
+    "BANK": "FAMILY SAVINGS CREDIT UNION"
+  },
+  {
+    "source_row": 248,
+    "deleted": false,
+    "CODE": "229",
+    "BANK": "CHARTWAY"
+  },
+  {
+    "source_row": 249,
+    "deleted": false,
+    "CODE": "230",
+    "BANK": "SOUTHWEST SECURITIES"
+  },
+  {
+    "source_row": 250,
+    "deleted": false,
+    "CODE": "231",
+    "BANK": "SLOCOMB NATIONAL BANK"
+  },
+  {
+    "source_row": 251,
+    "deleted": false,
+    "CODE": "232",
+    "BANK": "THE CLEBURNE COUNTY BANK"
+  },
+  {
+    "source_row": 252,
+    "deleted": false,
+    "CODE": "233",
+    "BANK": "BANK TRUST"
+  },
+  {
+    "source_row": 253,
+    "deleted": false,
+    "CODE": "234",
+    "BANK": "BANKSOUTH"
+  },
+  {
+    "source_row": 254,
+    "deleted": false,
+    "CODE": "235",
+    "BANK": "MOBILE EDUCATORS CREDIT UNION"
+  },
+  {
+    "source_row": 255,
+    "deleted": false,
+    "CODE": "236",
+    "BANK": "GWINNETT FEDERAL CREDIT UNION"
+  },
+  {
+    "source_row": 256,
+    "deleted": false,
+    "CODE": "237",
+    "BANK": "FIRST UNITED SECURITY BANK"
+  },
+  {
+    "source_row": 257,
+    "deleted": false,
+    "CODE": "238",
+    "BANK": "WESTERN AMERICAN NATIONAL BANK"
+  },
+  {
+    "source_row": 258,
+    "deleted": false,
+    "CODE": "239",
+    "BANK": "BANK OF OKLAHOMA"
+  },
+  {
+    "source_row": 259,
+    "deleted": false,
+    "CODE": "240",
+    "BANK": "FLORIDA CITIZENS BANK"
+  },
+  {
+    "source_row": 260,
+    "deleted": false,
+    "CODE": "241",
+    "BANK": "CITIBANK"
+  },
+  {
+    "source_row": 261,
+    "deleted": false,
+    "CODE": "242",
+    "BANK": "CITY COUNTY CREDIT UNION"
+  },
+  {
+    "source_row": 262,
+    "deleted": false,
+    "CODE": "243",
+    "BANK": "GUARANTY BANK"
+  },
+  {
+    "source_row": 263,
+    "deleted": false,
+    "CODE": "244",
+    "BANK": "AMERICAN EXPRESS CENTURION"
+  },
+  {
+    "source_row": 264,
+    "deleted": false,
+    "CODE": "245",
+    "BANK": "BELINGTON BANK"
+  },
+  {
+    "source_row": 265,
+    "deleted": false,
+    "CODE": "246",
+    "BANK": "OHIO VALLEY BANK"
+  },
+  {
+    "source_row": 266,
+    "deleted": false,
+    "CODE": "247",
+    "BANK": "CRAIG CREDIT UNION"
+  },
+  {
+    "source_row": 267,
+    "deleted": false,
+    "CODE": "248",
+    "BANK": "COMBUSTION CREDIT UNION"
+  },
+  {
+    "source_row": 268,
+    "deleted": false,
+    "CODE": "249",
+    "BANK": "THE CLAXTON BANK"
+  },
+  {
+    "source_row": 269,
+    "deleted": false,
+    "CODE": "250",
+    "BANK": "JEFFERSON COUNTY CREDIT UNION"
+  },
+  {
+    "source_row": 270,
+    "deleted": false,
+    "CODE": "251",
+    "BANK": "NATIONAL BANK OF COMMERCE"
+  },
+  {
+    "source_row": 271,
+    "deleted": false,
+    "CODE": "252",
+    "BANK": "PHENIX GIRARD BANK"
+  },
+  {
+    "source_row": 272,
+    "deleted": false,
+    "CODE": "253",
+    "BANK": "CONWAY NATIONAL BANK"
+  },
+  {
+    "source_row": 273,
+    "deleted": false,
+    "CODE": "254",
+    "BANK": "MEMBERS FIRST CREDIT UNION"
+  },
+  {
+    "source_row": 274,
+    "deleted": false,
+    "CODE": "255",
+    "BANK": "SUNCOAST SCHOOLS CREDIT UNION"
+  },
+  {
+    "source_row": 275,
+    "deleted": false,
+    "CODE": "256",
+    "BANK": "FIRST HOME SAVINGS BANK"
+  },
+  {
+    "source_row": 276,
+    "deleted": false,
+    "CODE": "257",
+    "BANK": "MID HUDSON VALLEY CREDIT UNION"
+  },
+  {
+    "source_row": 277,
+    "deleted": false,
+    "CODE": "258",
+    "BANK": "FLAG"
+  },
+  {
+    "source_row": 278,
+    "deleted": false,
+    "CODE": "259",
+    "BANK": "ATHENS FEDERAL COMMUNITY BANK"
+  },
+  {
+    "source_row": 279,
+    "deleted": false,
+    "CODE": "260",
+    "BANK": "E-TRADE BANK"
+  },
+  {
+    "source_row": 280,
+    "deleted": false,
+    "CODE": "261",
+    "BANK": "ALABAMA RURAL ELECTRIC FED CR"
+  },
+  {
+    "source_row": 281,
+    "deleted": false,
+    "CODE": "262",
+    "BANK": "MARION BANK & TRUST COMPANY"
+  },
+  {
+    "source_row": 282,
+    "deleted": false,
+    "CODE": "263",
+    "BANK": "OLD NATIONAL BANK"
+  },
+  {
+    "source_row": 283,
+    "deleted": false,
+    "CODE": "264",
+    "BANK": "PANHANDLE EDUCATORS CREDIT"
+  },
+  {
+    "source_row": 284,
+    "deleted": false,
+    "CODE": "265",
+    "BANK": "COMMERCE SOUTH"
+  },
+  {
+    "source_row": 285,
+    "deleted": false,
+    "CODE": "267",
+    "BANK": "USALLIANCE FEDERAL CREDIT UNIO"
+  },
+  {
+    "source_row": 286,
+    "deleted": false,
+    "CODE": "268",
+    "BANK": "RBC BANK"
+  },
+  {
+    "source_row": 287,
+    "deleted": false,
+    "CODE": "268",
+    "BANK": "NATIONAL BANK OF HARTFORD"
+  },
+  {
+    "source_row": 288,
+    "deleted": false,
+    "CODE": "269",
+    "BANK": "CHASE"
+  },
+  {
+    "source_row": 289,
+    "deleted": false,
+    "CODE": "270",
+    "BANK": "BALDWIN EDUCATORS CREDIT UNION"
+  },
+  {
+    "source_row": 290,
+    "deleted": false,
+    "CODE": "271",
+    "BANK": "BANKTRUST"
+  },
+  {
+    "source_row": 291,
+    "deleted": false,
+    "CODE": "355",
+    "BANK": "TIER ONE BANK"
+  },
+  {
+    "source_row": 292,
+    "deleted": false,
+    "CODE": "272",
+    "BANK": "PINNACLE CREDIT UNION"
+  },
+  {
+    "source_row": 293,
+    "deleted": false,
+    "CODE": "273",
+    "BANK": "SIKORSKY FINANCIAL CREDIT UNIO"
+  },
+  {
+    "source_row": 294,
+    "deleted": false,
+    "CODE": "274",
+    "BANK": "TYNDALL FEDERAL CREDIT UNION"
+  },
+  {
+    "source_row": 295,
+    "deleted": false,
+    "CODE": "275",
+    "BANK": "RBFCU"
+  },
+  {
+    "source_row": 296,
+    "deleted": false,
+    "CODE": "310",
+    "BANK": "FIRST VOLUNTEER BANK"
+  },
+  {
+    "source_row": 297,
+    "deleted": false,
+    "CODE": "276",
+    "BANK": "PUBLIX EMPLOYEES FEDERAL CREDI"
+  },
+  {
+    "source_row": 298,
+    "deleted": false,
+    "CODE": "277",
+    "BANK": "OCEAN BANK"
+  },
+  {
+    "source_row": 299,
+    "deleted": false,
+    "CODE": "272",
+    "BANK": "CHARTER BANK"
+  },
+  {
+    "source_row": 300,
+    "deleted": false,
+    "CODE": "279",
+    "BANK": "REPUBLIC BANK"
+  },
+  {
+    "source_row": 301,
+    "deleted": false,
+    "CODE": "280",
+    "BANK": "LISTERHILL CREDIT UNION"
+  },
+  {
+    "source_row": 302,
+    "deleted": false,
+    "CODE": "281",
+    "BANK": "GESA CREDIT UNION"
+  },
+  {
+    "source_row": 303,
+    "deleted": false,
+    "CODE": "283",
+    "BANK": "WOODFOREST NATIONAL BANK"
+  },
+  {
+    "source_row": 304,
+    "deleted": false,
+    "CODE": "283",
+    "BANK": "OTERO CREDIT UNION"
+  },
+  {
+    "source_row": 305,
+    "deleted": false,
+    "CODE": "284",
+    "BANK": "EASTERN FINANCIAL CREDIT UNION"
+  },
+  {
+    "source_row": 306,
+    "deleted": false,
+    "CODE": "285",
+    "BANK": "CENTRAL FLORIDA EDUCATORS"
+  },
+  {
+    "source_row": 307,
+    "deleted": false,
+    "CODE": "286",
+    "BANK": "CAROLINA FIRST"
+  },
+  {
+    "source_row": 308,
+    "deleted": false,
+    "CODE": "287",
+    "BANK": "BANK OF CHICKAMAUGA"
+  },
+  {
+    "source_row": 309,
+    "deleted": false,
+    "CODE": "288",
+    "BANK": "MCCLAIN BANK"
+  },
+  {
+    "source_row": 310,
+    "deleted": false,
+    "CODE": "289",
+    "BANK": "CHARLOTTE METRO"
+  },
+  {
+    "source_row": 311,
+    "deleted": false,
+    "CODE": "290",
+    "BANK": "JPMORGAN CHASE BANK"
+  },
+  {
+    "source_row": 312,
+    "deleted": false,
+    "CODE": "291",
+    "BANK": "PROVIDENT"
+  },
+  {
+    "source_row": 313,
+    "deleted": false,
+    "CODE": "292",
+    "BANK": "ATLANTA POSTAL CREDIT UNION"
+  },
+  {
+    "source_row": 314,
+    "deleted": false,
+    "CODE": "293",
+    "BANK": "ACU ASSOCIATED CREDIT UNION"
+  },
+  {
+    "source_row": 315,
+    "deleted": false,
+    "CODE": "294",
+    "BANK": "STANDARD BANK"
+  },
+  {
+    "source_row": 316,
+    "deleted": false,
+    "CODE": "296",
+    "BANK": "BANK ATLANTIC"
+  },
+  {
+    "source_row": 317,
+    "deleted": false,
+    "CODE": "295",
+    "BANK": "HIBERNIA NATIONAL BANK"
+  },
+  {
+    "source_row": 318,
+    "deleted": false,
+    "CODE": "296",
+    "BANK": "FIRST SOUTHERN NATIONAL BANK"
+  },
+  {
+    "source_row": 319,
+    "deleted": false,
+    "CODE": "298",
+    "BANK": "FARMERS STATE BANK"
+  },
+  {
+    "source_row": 320,
+    "deleted": false,
+    "CODE": "299",
+    "BANK": "GUARDIAN CREDIT UNION"
+  },
+  {
+    "source_row": 321,
+    "deleted": false,
+    "CODE": "300",
+    "BANK": "AMERICAN BANK"
+  },
+  {
+    "source_row": 322,
+    "deleted": false,
+    "CODE": "301",
+    "BANK": "CREDIT UNION OF TEXAS"
+  },
+  {
+    "source_row": 323,
+    "deleted": false,
+    "CODE": "302",
+    "BANK": "HERITAGE TRUST"
+  },
+  {
+    "source_row": 324,
+    "deleted": false,
+    "CODE": "303",
+    "BANK": "FIRST STATE BANK OF GREENVILLE"
+  },
+  {
+    "source_row": 325,
+    "deleted": false,
+    "CODE": "301",
+    "BANK": "NORTHWESTER BANK"
+  },
+  {
+    "source_row": 326,
+    "deleted": false,
+    "CODE": "301",
+    "BANK": "SOVEREIGN BANK"
+  },
+  {
+    "source_row": 327,
+    "deleted": false,
+    "CODE": "302",
+    "BANK": "COOSA PINES FED CREDIT UNION"
+  },
+  {
+    "source_row": 328,
+    "deleted": false,
+    "CODE": "303",
+    "BANK": "CITY NATIONAL BANK"
+  },
+  {
+    "source_row": 329,
+    "deleted": false,
+    "CODE": "304",
+    "BANK": "BANK OF TALLAHASSEE"
+  },
+  {
+    "source_row": 330,
+    "deleted": false,
+    "CODE": "305",
+    "BANK": "BANK OF EARLY"
+  },
+  {
+    "source_row": 331,
+    "deleted": false,
+    "CODE": "307",
+    "BANK": "BRANCH BANKING AND TRUST CO"
+  },
+  {
+    "source_row": 332,
+    "deleted": false,
+    "CODE": "307",
+    "BANK": "SPRING VALLEY BANK & TRUST"
+  },
+  {
+    "source_row": 333,
+    "deleted": false,
+    "CODE": "308",
+    "BANK": "HAWAII STATE FEDERAL CREDIT UN"
+  },
+  {
+    "source_row": 334,
+    "deleted": false,
+    "CODE": "309",
+    "BANK": "AUBURN UNIVERSITY FEDERAL CRED"
+  },
+  {
+    "source_row": 335,
+    "deleted": false,
+    "CODE": "309",
+    "BANK": "MIDSOUTH BANK"
+  },
+  {
+    "source_row": 336,
+    "deleted": false,
+    "CODE": "306",
+    "BANK": "REGIONAL FEDERAL CREDIT UNION"
+  },
+  {
+    "source_row": 337,
+    "deleted": false,
+    "CODE": "311",
+    "BANK": "BANKNORTH"
+  },
+  {
+    "source_row": 338,
+    "deleted": false,
+    "CODE": "312",
+    "BANK": "MOUNTAIN NATIONAL BANK"
+  },
+  {
+    "source_row": 339,
+    "deleted": false,
+    "CODE": "313",
+    "BANK": "BANK NEWPORT"
+  },
+  {
+    "source_row": 340,
+    "deleted": false,
+    "CODE": "314",
+    "BANK": "FIRST PREMIER BANK"
+  },
+  {
+    "source_row": 341,
+    "deleted": false,
+    "CODE": "315",
+    "BANK": "FIRST NATIONAL BANK HARTFORD"
+  },
+  {
+    "source_row": 342,
+    "deleted": false,
+    "CODE": "316",
+    "BANK": "ORANGE BEACH"
+  },
+  {
+    "source_row": 343,
+    "deleted": false,
+    "CODE": "317",
+    "BANK": "PIEDMONT AVIATION CREDIT UNION"
+  },
+  {
+    "source_row": 344,
+    "deleted": false,
+    "CODE": "318",
+    "BANK": "DOCO REGIONAL FED CRED UNION"
+  },
+  {
+    "source_row": 345,
+    "deleted": false,
+    "CODE": "319",
+    "BANK": "RIVERSIDE NATIONAL BANK"
+  },
+  {
+    "source_row": 346,
+    "deleted": false,
+    "CODE": "320",
+    "BANK": "BANK OF EVERGREEN"
+  },
+  {
+    "source_row": 347,
+    "deleted": false,
+    "CODE": "321",
+    "BANK": "FIDELITY HOMESTEAD ASSOCIATION"
+  },
+  {
+    "source_row": 348,
+    "deleted": false,
+    "CODE": "322",
+    "BANK": "AMERIS BANK"
+  },
+  {
+    "source_row": 349,
+    "deleted": false,
+    "CODE": "323",
+    "BANK": "TRANSPORATION ALLIANCE BANK"
+  },
+  {
+    "source_row": 350,
+    "deleted": false,
+    "CODE": "324",
+    "BANK": "SUNSOUTH BANK"
+  },
+  {
+    "source_row": 351,
+    "deleted": false,
+    "CODE": "325",
+    "BANK": "WIREGRASS FEDERAL CREDIT UNION"
+  },
+  {
+    "source_row": 352,
+    "deleted": false,
+    "CODE": "326",
+    "BANK": "GULF WINDS FEDERAL CREDIT UNIO"
+  },
+  {
+    "source_row": 353,
+    "deleted": false,
+    "CODE": "327",
+    "BANK": "RENASANT BANK"
+  },
+  {
+    "source_row": 354,
+    "deleted": false,
+    "CODE": "328",
+    "BANK": "FISRT STATE BANK OF TEXAS"
+  },
+  {
+    "source_row": 355,
+    "deleted": false,
+    "CODE": "329",
+    "BANK": "DOVER FEDERAL CREDIT UNION"
+  },
+  {
+    "source_row": 356,
+    "deleted": false,
+    "CODE": "330",
+    "BANK": "UNION STATE BANK"
+  },
+  {
+    "source_row": 357,
+    "deleted": false,
+    "CODE": "331",
+    "BANK": "SECURITY BANK"
+  },
+  {
+    "source_row": 358,
+    "deleted": false,
+    "CODE": "332",
+    "BANK": " LANGLEY FEDERAL CREDIT UNION"
+  },
+  {
+    "source_row": 359,
+    "deleted": false,
+    "CODE": "333",
+    "BANK": "RENASANT"
+  },
+  {
+    "source_row": 360,
+    "deleted": false,
+    "CODE": "334",
+    "BANK": "PEOPLES SOUTHERN BANK"
+  },
+  {
+    "source_row": 361,
+    "deleted": false,
+    "CODE": "335",
+    "BANK": "FIRST HAWAIIAN BANK"
+  },
+  {
+    "source_row": 362,
+    "deleted": false,
+    "CODE": "336",
+    "BANK": "FOUNDERS BANK"
+  },
+  {
+    "source_row": 363,
+    "deleted": false,
+    "CODE": "337",
+    "BANK": "PEOPLES' FIRST BANK"
+  },
+  {
+    "source_row": 364,
+    "deleted": false,
+    "CODE": "338",
+    "BANK": "PEOPLES SOUTH BANK"
+  },
+  {
+    "source_row": 365,
+    "deleted": false,
+    "CODE": "339",
+    "BANK": "HIGHER ONE"
+  },
+  {
+    "source_row": 366,
+    "deleted": false,
+    "CODE": "340",
+    "BANK": "ZIONS BANK"
+  },
+  {
+    "source_row": 367,
+    "deleted": false,
+    "CODE": "341",
+    "BANK": "SLOSS FEDERAL CREDIT UNION"
+  },
+  {
+    "source_row": 368,
+    "deleted": false,
+    "CODE": "342",
+    "BANK": "COMMUNITY FEDERAL CREDIT UNION"
+  },
+  {
+    "source_row": 369,
+    "deleted": false,
+    "CODE": "343",
+    "BANK": "PRIMESOUTH BANK"
+  },
+  {
+    "source_row": 370,
+    "deleted": false,
+    "CODE": "345",
+    "BANK": "FIRST FARMERS & MERCHANTS"
+  },
+  {
+    "source_row": 371,
+    "deleted": false,
+    "CODE": "346",
+    "BANK": "MERRILL LYNCH"
+  },
+  {
+    "source_row": 372,
+    "deleted": false,
+    "CODE": "347",
+    "BANK": "FIA CARD SERVICES, N.A."
+  },
+  {
+    "source_row": 373,
+    "deleted": false,
+    "CODE": "348",
+    "BANK": "ALL SOUTH FED CREDIT UNIION"
+  },
+  {
+    "source_row": 374,
+    "deleted": false,
+    "CODE": "349",
+    "BANK": "ACS/MELLON TRUST"
+  },
+  {
+    "source_row": 375,
+    "deleted": false,
+    "CODE": "350",
+    "BANK": "SOUTHERN INDEPENDENT BANK"
+  },
+  {
+    "source_row": 376,
+    "deleted": false,
+    "CODE": "351",
+    "BANK": "BANK OF YAZOO"
+  },
+  {
+    "source_row": 377,
+    "deleted": false,
+    "CODE": "352",
+    "BANK": "FRONTIER BANK"
+  },
+  {
+    "source_row": 378,
+    "deleted": false,
+    "CODE": "353",
+    "BANK": "FIRST NATIONAL BANK OF DECATUR"
+  },
+  {
+    "source_row": 379,
+    "deleted": false,
+    "CODE": "354",
+    "BANK": "A B & T NATIONAL BANK"
+  },
+  {
+    "source_row": 380,
+    "deleted": false,
+    "CODE": "355",
+    "BANK": "MEMPHIS AREA TEACHERS CREDIT U"
+  },
+  {
+    "source_row": 381,
+    "deleted": false,
+    "CODE": "356",
+    "BANK": "RIVER BANK & TRUST"
+  },
+  {
+    "source_row": 382,
+    "deleted": false,
+    "CODE": "357",
+    "BANK": "COMMERCE BANK"
+  },
+  {
+    "source_row": 383,
+    "deleted": false,
+    "CODE": "358",
+    "BANK": "COMMUNITY SOUTH CREDIT UNION"
+  },
+  {
+    "source_row": 384,
+    "deleted": false,
+    "CODE": "359",
+    "BANK": "COVENANT HEALTH CREDIT UNION"
+  },
+  {
+    "source_row": 385,
+    "deleted": false,
+    "CODE": "360",
+    "BANK": "OAKLAND MUNICIPAL CREDIT UNION"
+  },
+  {
+    "source_row": 386,
+    "deleted": false,
+    "CODE": "361",
+    "BANK": "MARITAN STATE BANK"
+  },
+  {
+    "source_row": 387,
+    "deleted": false,
+    "CODE": "362",
+    "BANK": "BALDWIN COUNTY BANK"
+  },
+  {
+    "source_row": 388,
+    "deleted": false,
+    "CODE": "363",
+    "BANK": "FIRST MISSISSIPPI FEDERAL CRED"
+  },
+  {
+    "source_row": 389,
+    "deleted": false,
+    "CODE": "364",
+    "BANK": "LANDMARK CREDIT UNION"
+  },
+  {
+    "source_row": 390,
+    "deleted": false,
+    "CODE": "365",
+    "BANK": "SB & T BANK"
+  },
+  {
+    "source_row": 391,
+    "deleted": false,
+    "CODE": "366",
+    "BANK": "CAPITAL SOUTH BANK"
+  },
+  {
+    "source_row": 392,
+    "deleted": false,
+    "CODE": "367",
+    "BANK": "BANK OF NORTH GEORGIA"
+  },
+  {
+    "source_row": 393,
+    "deleted": false,
+    "CODE": "368",
+    "BANK": "BEST BANK"
+  },
+  {
+    "source_row": 394,
+    "deleted": false,
+    "CODE": "369",
+    "BANK": "TOWN COUNTRY NATIONAL BANK"
+  },
+  {
+    "source_row": 395,
+    "deleted": false,
+    "CODE": "370",
+    "BANK": "FIRST JACKSON BANK"
+  },
+  {
+    "source_row": 396,
+    "deleted": false,
+    "CODE": "371",
+    "BANK": "UFCW LOCAL 342 FCU"
+  },
+  {
+    "source_row": 397,
+    "deleted": false,
+    "CODE": "100",
+    "BANK": "P&C BANK"
+  },
+  {
+    "source_row": 398,
+    "deleted": false,
+    "CODE": "372",
+    "BANK": "KEYSTONE BANK"
+  },
+  {
+    "source_row": 399,
+    "deleted": false,
+    "CODE": "341",
+    "BANK": "RAMER BANK & TRUST"
+  },
+  {
+    "source_row": 400,
+    "deleted": false,
+    "CODE": "341",
+    "BANK": "FORT CAMPBELL FEDERAL CREDIT U"
+  },
+  {
+    "source_row": 401,
+    "deleted": false,
+    "CODE": "372",
+    "BANK": "CCB COMMUNITY BANK"
+  },
+  {
+    "source_row": 402,
+    "deleted": false,
+    "CODE": "374",
+    "BANK": "HORIZON ONE"
+  },
+  {
+    "source_row": 403,
+    "deleted": false,
+    "CODE": "375",
+    "BANK": "THE FIRST NATL. BANK OF DOZIER"
+  },
+  {
+    "source_row": 404,
+    "deleted": false,
+    "CODE": "376",
+    "BANK": "CB&T EAST ALABAMA"
+  },
+  {
+    "source_row": 405,
+    "deleted": false,
+    "CODE": "377",
+    "BANK": "FORT MCCLELLAN CREDIT UNION"
+  },
+  {
+    "source_row": 406,
+    "deleted": false,
+    "CODE": "378",
+    "BANK": "BBVA COMPASS BANK"
+  },
+  {
+    "source_row": 407,
+    "deleted": false,
+    "CODE": "379",
+    "BANK": "KEYBANK NATIONAL ASSOCIATION"
+  },
+  {
+    "source_row": 408,
+    "deleted": false,
+    "CODE": "380",
+    "BANK": "CADENCE"
+  },
+  {
+    "source_row": 409,
+    "deleted": false,
+    "CODE": "381",
+    "BANK": "PNCBANK"
+  },
+  {
+    "source_row": 410,
+    "deleted": false,
+    "CODE": "383",
+    "BANK": "FIRST CONVENIENCE BANK"
+  },
+  {
+    "source_row": 411,
+    "deleted": false,
+    "CODE": "384",
+    "BANK": "SERVISFIRST BANK"
+  },
+  {
+    "source_row": 412,
+    "deleted": false,
+    "CODE": "341",
+    "BANK": "WEBSTER BANK"
+  },
+  {
+    "source_row": 413,
+    "deleted": false,
+    "CODE": "385",
+    "BANK": "PRIMEPLUS"
+  },
+  {
+    "source_row": 414,
+    "deleted": false,
+    "CODE": "386",
+    "BANK": "BNC NATIONAL BANK"
+  },
+  {
+    "source_row": 415,
+    "deleted": false,
+    "CODE": "387",
+    "BANK": "FIRST NATIONAL BANK & TRUST CO"
+  },
+  {
+    "source_row": 416,
+    "deleted": false,
+    "CODE": "387",
+    "BANK": "FEB"
+  },
+  {
+    "source_row": 417,
+    "deleted": false,
+    "CODE": "388",
+    "BANK": "JD BANK"
+  },
+  {
+    "source_row": 418,
+    "deleted": false,
+    "CODE": "389",
+    "BANK": "AMERICAN EXPRESS"
+  },
+  {
+    "source_row": 419,
+    "deleted": false,
+    "CODE": "390",
+    "BANK": "PEOPLES BANK"
+  },
+  {
+    "source_row": 420,
+    "deleted": false,
+    "CODE": "391",
+    "BANK": "TRUSTMARK NATIONAL BANK"
+  },
+  {
+    "source_row": 421,
+    "deleted": false,
+    "CODE": "392",
+    "BANK": "ILLIANA FINANCIAL"
+  },
+  {
+    "source_row": 422,
+    "deleted": false,
+    "CODE": "401",
+    "BANK": "ING BANK"
+  },
+  {
+    "source_row": 423,
+    "deleted": false,
+    "CODE": "393",
+    "BANK": "BANK MOBILE"
+  },
+  {
+    "source_row": 424,
+    "deleted": false,
+    "CODE": "000",
+    "BANK": "NONE"
+  },
+  {
+    "source_row": 425,
+    "deleted": false,
+    "CODE": "393",
+    "BANK": "BANK OF FRANKEWING"
+  },
+  {
+    "source_row": 426,
+    "deleted": false,
+    "CODE": "394",
+    "BANK": "ALABAMA CREDIT UNION"
+  },
+  {
+    "source_row": 427,
+    "deleted": false,
+    "CODE": "395",
+    "BANK": "LIBERTY BANK"
+  },
+  {
+    "source_row": 428,
+    "deleted": false,
+    "CODE": "396",
+    "BANK": "CAPSTONE BANK"
+  },
+  {
+    "source_row": 429,
+    "deleted": false,
+    "CODE": "397",
+    "BANK": "CHATTAHOOCHEE FEDERAL CREDIT U"
+  },
+  {
+    "source_row": 430,
+    "deleted": false,
+    "CODE": "398",
+    "BANK": "FRIEND."
+  },
+  {
+    "source_row": 431,
+    "deleted": false,
+    "CODE": "399",
+    "BANK": "CENTENNIAL BANK"
+  },
+  {
+    "source_row": 432,
+    "deleted": false,
+    "CODE": "400",
+    "BANK": "THE INDEPENDANT BANK OF OXFORD"
+  },
+  {
+    "source_row": 433,
+    "deleted": false,
+    "CODE": "401",
+    "BANK": "BANK OF FITZGERALD"
+  },
+  {
+    "source_row": 434,
+    "deleted": false,
+    "CODE": "402",
+    "BANK": "CEDAR SPRINGS FCU"
+  },
+  {
+    "source_row": 435,
+    "deleted": false,
+    "CODE": "403",
+    "BANK": "AXOS BANK"
+  },
+  {
+    "source_row": 436,
+    "deleted": false,
+    "CODE": "404",
+    "BANK": "1ST SECURITY BANK"
+  },
+  {
+    "source_row": 437,
+    "deleted": false,
+    "CODE": "405",
+    "BANK": "BRYANT BANK"
+  },
+  {
+    "source_row": 438,
+    "deleted": false,
+    "CODE": "406",
+    "BANK": "ALL IN CREDIT UNION"
+  },
+  {
+    "source_row": 439,
+    "deleted": false,
+    "CODE": "407",
+    "BANK": "SYNOVUS"
+  },
+  {
+    "source_row": 440,
+    "deleted": false,
+    "CODE": "408",
+    "BANK": "TRUIST BANK"
+  },
+  {
+    "source_row": 441,
+    "deleted": false,
+    "CODE": "331",
+    "BANK": "TUSKEGEE FEDERAL CREDIT UNION"
+  },
+  {
+    "source_row": 442,
+    "deleted": false,
+    "CODE": "100",
+    "BANK": "LAUNCH CREDIT UNION"
+  },
+  {
+    "source_row": 443,
+    "deleted": false,
+    "CODE": "409",
+    "BANK": "SOFI BANK, N.A."
+  },
+  {
+    "source_row": 444,
+    "deleted": false,
+    "CODE": "410",
+    "BANK": "22 STATE BANK"
+  },
+  {
+    "source_row": 445,
+    "deleted": false,
+    "CODE": "410",
+    "BANK": "FIRST CAHAWBA"
+  },
+  {
+    "source_row": 446,
+    "deleted": false,
+    "CODE": "411",
+    "BANK": "HOPE CREDIT UNION"
+  }
+]

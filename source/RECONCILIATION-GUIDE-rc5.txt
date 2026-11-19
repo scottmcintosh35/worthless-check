@@ -1,0 +1,38 @@
+PIKE COUNTY WORTHLESS CHECK UNIT - RECONCILIATION UPDATE rc5
+
+INSTALL
+Close the application in every RDP session and run WC-Server2022-Setup-rc5.exe as Administrator over rc4. Existing databases, records and logins are retained. Do not re-import the backup if the Complete Legacy Workspace is already loaded.
+
+OPEN
+Sign in, open Complete Legacy Workspace, and click Reconcile payment / case. You can first select a PAYMENTS row to open that exact payment. Reconciliation totals remains available separately.
+
+1. SELECT THE PAYMENT
+Unresolved exceptions only initially shows active payments that lack a unique case-number match and do not yet have an explicit case link. Search by receipt, case number, name or source row. Lists show the first 200 matches; refine the search as needed. Clear the exceptions filter to find already-linked payments or deleted history.
+
+2. SELECT EXACT CASE ROWS
+Search candidate cases. The list includes archived/deleted rows, original case and party IDs, check number/date/amount, and recorded balances. Select the correct row and click Use selected as TARGET. Case source row numbers distinguish cases even when the case number is duplicated. For a transfer also select Use selected as OLD case. The current explicit link is displayed when one exists.
+The program does not decide ownership by names, and it does not merge or delete duplicate case rows.
+
+3. CHOOSE AN ACCOUNTING ACTION
+Link only: records the verified case association with ZERO balance effects. Use only when evidence shows the balances already account for the payment, or for record-association review while financial reconciliation remains separate.
+Apply to target: deducts the four supported allocations from target due balances and adds them to cumulative paid amounts. This is only for a payment verified not to be included already. An already-explicitly-linked payment cannot be applied again.
+Transfer: reverses those allocations from the selected old case and applies them to the target case atomically. When an explicit link already exists, the selected old case must be that linked case. Old and target rows must differ. Use this only when evidence confirms the payment was previously included in the old case's recorded balances.
+
+4. EVIDENCE AND PREVIEW
+Record supporting evidence in the text area: receipt/register references, dates, check details, party IDs, and why balances already include or exclude the payment. Enter a correction reason.
+Click Generate balance preview. Review the exact payment/source row, case identities, four due balances, cumulative paid allocations and AMT_PAID before/after. Link only explicitly displays zero balance effect.
+
+5. SAVE
+Check the reviewed acknowledgment and click Save audited reconciliation. An application Administrator is required. Confirm the displayed action. Saving records the case link, any approved balance changes, user, timestamp, supporting evidence, reason and full before/after preview in one transaction.
+If another session changes the payment, case or link after preview, the save is rejected. Generate a new preview and review it. Selection/action changes disable saving until a new preview is generated.
+Saved reconciliation history shows the evidence and complete preview. Its database entries are append-only through the application. To correct a mistaken reconciliation, create a new reviewed reconciliation; do not erase its history. Same-target repeated application is blocked.
+
+WHAT CHANGES
+The explicit link uses the exact WC_CASE source row. The legacy payment CASE_NO and preserved original records remain unchanged. Payment history uses explicit links first; unlinked payments continue to use the legacy case number and can remain ambiguous. Later supported payment corrections use the explicitly linked case. A saved link is removed from the unresolved-payment exception list; this indicates recorded ownership, not independent financial certification.
+Financial balance effects cover REST_PAID/SFEE_PAID/FO_PAID/WD_PAID against CK_DUE/FEE_DUE/DA_DUE/WD_DUE and AMT_PAID when present. Applying/transferring a payment with nonzero CC_PAID, COURT_REST, OVERPAID or MISCL is blocked because specialized accounting is not modeled here. Link only remains available with a zero-effect preview. Deleted payments and archived cases can be linked for historical review, but cannot participate in apply/transfer balance changes. Invalid amounts or effects that would create negative supported balances also block the transaction.
+
+VERIFICATION
+Passed 19 targeted reconciliation tests: link-only preservation; one-time application; transfer; duplicate-case row identity; evidence/reason and Administrator requirements; stale payment/case rejection (including a separate SQLite connection); tampered preview rejection; negative/over-application checks; specialized/deleted record restrictions; repeated-save prevention; append-only audit; rollback on late audit failure; subsequent corrections using the explicit row; and unresolved exception counts.
+Also passed seven full-backup tests preserving all 147,541 source records and payment history, 43 existing application tests, and a visible fictional UI workflow covering selection, evidence, preview, confirmation, save, history and invalidation. Installer extraction and bundled executable checks are reported in the validation file.
+
+This remains a test candidate. It does not independently certify case ownership or historical balances. Production acceptance, specialized fund distribution/forms and actual Server 2022/RDP testing remain outstanding. The earlier sample/snapshot screens remain separate from the complete legacy workspace. No real records are packaged in the installer.

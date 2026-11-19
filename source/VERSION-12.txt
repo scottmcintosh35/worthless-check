@@ -1,0 +1,47 @@
+VERSION 12 - REMAINING DATABASE MENU ITEMS
+
+All previously pending Database menu items now open working prototype tools:
+
+Case Number: configure prefix, padding and next sequence. Leave case number blank
+when adding a case to allocate automatically; manually entered numbers still work.
+Adjustment Number / Receipt Number: configure identifiers for future records.
+Defendant ID / Merchant ID: configure the next integer ID. Merchant ID also offers
+the new Merchant directory with address, city/state/ZIP, telephone and contact.
+Numbers cannot be moved backward. Existing numbers/IDs are preserved. Collisions
+are skipped during allocation. These are demo sequences, not final official
+receipt policies or recovery-safe numbers across restores of old backups.
+
+View Adjustment Records: inspect charge adjustments, add an adjustment for the
+case selected in the main window, or reverse an original adjustment. Enter signed
+dollar changes by category, operator and reason. Negative changes reduce charges.
+Reductions below payments already applied are rejected. Original adjustments and
+reversals are retained as separate records. This is charge adjustment only; it
+does not replace final county fund distribution or court disposition workflows.
+
+Supervisor Actions: archive the selected case, void a payment by receipt number
+or payment ID, view the latest 1,000 audit entries, back up, or check integrity.
+Archiving rejects cases with active payments. Archived cases cannot accept new
+payments. Voiding retains the payment and receipt number, marks reprints VOID,
+and excludes the payment from paid balances and collection totals.
+
+View Deleted Records: review archived prototype cases and restore selected cases.
+View Deleted Payments: review voided prototype payments and restore if balances
+allow. Both require an operator and reason. Nothing is physically erased.
+Legacy DEL_REC and DEL_PAY remain separately preserved in the imported database;
+these tools do not revive or merge those legacy rows into the demo database.
+
+Reindex / Index Adjustment Table: rebuild SQLite indexes with an automatic backup
+and database integrity check. They do not rebuild original FoxPro CDX files.
+
+Modify table structures: inspect columns and add optional custom_ columns to
+cases, defendants or merchants using TEXT, INTEGER or REAL. A backup is created
+first. Existing columns cannot be renamed, removed or have their types changed.
+Custom columns provide storage only; entry form/report customization is separate.
+
+Backups from maintenance actions are in maintenance-backups beside demo.sqlite.
+Operator initials are recorded as entered; authenticated supervisor permissions
+remain pending for the final version. Merchant records have their own IDs but
+existing typed merchant names are not automatically merged or relinked.
+
+Extract this version and run Start-Prototype.cmd. Existing sample data is retained.
+Imported legacy data remains read-only, as requested until the final migration.

@@ -1,0 +1,16 @@
+VERSION 7 - PIKE COUNTY OFFICE HEADING
+
+Added the following heading to the main program, imported-record viewer,
+receipt text/printouts and collection summaries:
+
+Office of the District Attorney
+Twelfth Judicial Circuit
+State of Alabama
+Worthless Check Unit - Pike County
+
+All existing functions remain available. Demonstration receipts retain their
+demonstration marking. This change does not activate pending report/letter
+commands or change any stored case/payment data.
+
+Extract this version and run Start-Prototype.cmd. Previously imported SQLite
+databases can be opened with Open Imported Database; no reimport is needed.

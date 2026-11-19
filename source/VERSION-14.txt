@@ -1,0 +1,54 @@
+VERSION 14 - REMAINING FUNCTIONS MENU ITEMS
+
+Edit Case: double-click a case or use Functions > Edit Case. Edit names, check
+number, entered/due dates, linked defendant and bank. Case numbers stay fixed.
+Original charges may be edited only before any payment or adjustment history;
+after that, use a charge adjustment. Every edit requires a reason and records
+before/after values. Newly posted receipts retain their original party details;
+existing receipts are snapshotted from current case details during this upgrade.
+
+Print Reports: preview, save text and print on letter paper. Includes Case Listing,
+Case Detail, Daily Payment Register, Check Analysis, Monthly Activity and Defendant
+Listing. Case Detail uses the selected case with all-date payment/adjustment
+history. Defendant Listing uses all profile records. Other reports use the chosen
+date range; case listings and check analysis select cases by entered date.
+Daily Register Reports: active payment allocations and totals by payment date;
+voided payments are excluded. Check Analysis: check amounts, original charges,
+current balances and merchant balance grouping. Monthly Activity: cases entered,
+adjustment rows created, voided payments and payment-date collections.
+Current balances are labeled current, not historical balances as of period end.
+Zero balance is not automatically interpreted as a legal case disposition.
+
+Modify Reports: Administrator can change report titles, text layout and footer
+using the listed placeholders. Data calculations stay in the application and the
+demonstration marking cannot be removed by the template. Templates cannot execute
+code or access arbitrary object properties. Settings are per report type.
+
+Month-End Process: preview a month, save a fixed prototype snapshot and close the
+month to financial changes, or reopen it with a reason. Closing creates a backup
+and records source payment rows (including void flags), cases entered and charge
+adjustments created in UTC during the month. The displayed monthly report is
+stored with the snapshot and its checksum; reprints use that stored report.
+Reopening retains old snapshots. Closing again creates a new snapshot version.
+Closed months block new payments dated in that month, void/restore of those
+payments, edits to cases entered in that month, new case entry in that month,
+and charge adjustments created during a closed current month. Snapshot balances
+are not a reconstructed historical ledger. Administrators control close/reopen.
+No funds are distributed, no merchant checks are created, and this does not
+certify or reproduce the old county month-end fund rules.
+
+Print Defendant Labels: all profiles with name/address, or the defendant linked
+to the selected case. Profiles missing name/address are counted and skipped.
+Default layout is 3 columns by 10 rows on letter paper. Modify Labels configures
+label size, rows/columns, margins, gap, font and address text placeholders.
+Choose actual size / 100% and disable browser headers/footers. Test on plain
+paper before loading label sheets; printer alignment remains to be verified.
+
+All previously pending Functions menu items now open prototype workflows. These
+are new review implementations. The 101 recovered FoxPro templates and specialized
+legal letters, warrants, affidavits and payout workflows have NOT all been rebuilt
+or approved. Official forms, fund rules, shared-server operation and final legacy
+cutover still require separate verification. The imported database stays read-only.
+
+Extract this version and run Start-Prototype.cmd. Existing sample data is retained;
+there is no need to reimport the legacy database.

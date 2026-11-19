@@ -1,0 +1,28 @@
+VERSION 3 - VISIBLE INFORMATION TABS
+
+Main window now contains visible tabs:
+  Cases / Payments
+  Defendant Information
+  Reconciliation
+  Reports / Month-End
+
+Defendant Information opens the directory directly. Choose New profile or select
+an existing profile and click Edit selected. The profile contains Identity,
+Contact, Description, History / notes, and Aliases tabs, including the information
+fields shown in your screenshots. Its demo record ID is displayed above the tabs.
+New profiles are blank: no personal data from your screenshots is prefilled.
+
+The top navigation now uses the screenshot's System, File, Edit, Program,
+Database, Functions, and Quit labels. Supported commands open their corresponding
+prototype workflows. Unimplemented business commands are disabled and marked
+pending. Generic FoxPro editing/debugging commands are not implemented.
+The Reports / Month-End tab displays the report/process categories visible in
+the supplied Functions menu. Pending options do not execute accounting actions.
+
+After linking or changing a defendant, click Refresh reconciliation to review
+the current state. Existing prototype cases, profiles and payments are retained
+when the same local database is used.
+
+This remains a fictional-data review prototype. All README and VERSION-2 limits
+still apply, including no production authentication, live migration or verified
+month-end processing. Windows Server 2022 testing remains outstanding.

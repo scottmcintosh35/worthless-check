@@ -1,0 +1,47 @@
+VERSION 2 - DEFENDANT WORKFLOW REVIEW
+
+Added from the supplied screenshots:
+- Records > Defendant directory: searchable profiles and alias names.
+- Profile tabs: Identity, Contact, Description, History / notes, Aliases.
+- Fields mapped to WC_DEF, including address, contact, employer, birth date,
+  physical description and history. SSN entry is masked on screen; the prototype
+  database is NOT encrypted. Continue to use fictional data only.
+- Ctrl+Enter / double-click for details, Ctrl+W to save a profile, and explicit
+  profile-to-case linking from the directory.
+- Records > Reconciliation review: stored case name, linked profile ID/name,
+  and Names match / Name differs / Not linked. No direct editing or auto-merging.
+
+TRY IT
+1. Select DEMO-001 in the main window.
+2. Open Records > Defendant directory > New profile.
+3. Enter SAMPLE PERSON A and optional fictional details, then Save profile.
+4. Select that profile and choose Link to selected case. Confirm the link.
+5. Open Records > Reconciliation review. DEMO-001 should show Names match.
+6. Edit the profile name and reopen reconciliation to see Name differs.
+   Case names and payment balances are not silently rewritten.
+
+The profile directory starts empty. Existing version 1 sample cases and payments
+remain in the same local database. New directory tables and an optional case
+link column are added automatically. Case creation still uses a typed name;
+link the matching directory profile explicitly after creating a sample case.
+Demo profile IDs are new internal IDs, not imported legacy defendant IDs.
+
+Alias addition saves immediately and is separate from saving/canceling profile
+edits. This version supports alias names only, not all ALIAS.DBF attributes.
+Profile audit entries record action and record ID under operator DEMO; they do
+not capture complete before/after values or provide production tamper protection.
+
+Screenshots establish UI fields and menu labels, not complete business behavior.
+The supplied Functions menu shows Month-End Process, Daily Register Reports,
+Check Analysis Report and Monthly Activity Report; the submenu contents, payment
+entry screen and actual month-end steps have not yet been supplied. Those remain
+pending rather than being implemented from assumptions. The generic FoxPro
+File/Edit/Program menus are not recreated as application business functions.
+
+Next screenshots needed: main case detail after the defendant Next button,
+payment entry/posting, Month-End Process submenu and dialogs (without executing
+a live close), and Daily Register Reports submenu. Also confirm simultaneous
+user count before designing shared server access.
+
+All README limitations still apply. This is a single-user review prototype;
+Windows Server 2022 interactive verification remains outstanding.

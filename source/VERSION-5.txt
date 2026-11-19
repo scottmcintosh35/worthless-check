@@ -1,0 +1,27 @@
+VERSION 5 - IMPORT DATABASE BUTTON / MENU
+
+Start the program with Start-Prototype.cmd.
+Choose File > Import Database (also available under Database > Import Database).
+1. Browse to the old backup folder containing .DBF and .FPT files. Selecting
+   WC_backup automatically uses its WC child folder when appropriate.
+2. Choose where to save the NEW imported SQLite database. Existing files are
+   never overwritten, and the destination must be outside the source folder.
+3. Click Import Database. A progress display shows files and tables being read.
+4. When complete, the imported records open in a new read-only window.
+
+To reopen an earlier import, choose File > Open Imported Database and select
+the .sqlite file. These commands are also available in imported-record windows.
+
+The importer runs in the background so the window remains responsive. Let it
+finish before closing. It preserves source DBF/FPT files and physical records,
+checks original source hashes, checks table counts and SQLite integrity, and
+creates an adjacent .report.json inventory. It does not perform the separate
+office accounting reconciliation or automatically repair source data problems.
+
+No actual records are included in WC-Prototype-v5.zip. Existing imported SQLite
+files, including the previously delivered WC-Imported.sqlite, can be opened using
+the new File menu. Existing sample data remains in its original local location.
+
+All earlier review-only limitations apply. Imported records remain read-only;
+the function does not merge old records into the editable fictional sample DB.
+Use a consistent closed-system backup; original files are opened only for reads.

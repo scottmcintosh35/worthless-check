@@ -1,0 +1,15 @@
+VERSION 8 - DEFENDANT BROWSE HEADERS
+
+Defendant Information now shows these columns in the requested order:
+Defendant, Address, DOB, Ssn, ID, Race, Sex, License, History, Height_Ft,
+Height_in, Hair, Eyes, Weight, Telephone, Employer, Emp. Phone.
+
+Use the bottom horizontal scrollbar to reach columns on the right. A vertical
+scrollbar moves through rows. Double-click any row for the full information tabs.
+History displays Memo when history content is present; open the profile to read it.
+SSN values retain the earlier masking behavior; the header is visible.
+
+The same columns appear in the sample defendant directory and the imported
+WC_DEF view. Fields not populated in a record remain blank. Deleted records in
+the imported view remain excluded by default; if included, they appear gray.
+Existing databases do not need to be imported again. No record data is changed.

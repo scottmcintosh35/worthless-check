@@ -1,0 +1,49 @@
+PIKE COUNTY WORTHLESS CHECK UNIT - COMPLETE LEGACY TEST CANDIDATE rc4
+
+This is an executable installer for evaluation. It is not a completed/approved production replacement. It provides the complete backup working records and exact source payment history, with audited editing and transactional test payments. Original records and source file bytes remain preserved separately.
+
+INSTALL AND LOAD
+1. Close the program in every RDP session. Install WC-Server2022-Setup-rc4.exe as Administrator over the existing installation. Existing main data and application logins are retained. If a prior failed launch is still running, end its PikeCountyWC.exe process first.
+2. Sign in with an application Administrator account. The Windows account must have the existing PikeCountyWCUsers group access.
+3. Click COMPLETE LEGACY WORKSPACE at the top (also under Database).
+4. Confirm the one-time full load. If rc3 already imported your actual legacy data, rc4 uses the preserved original records already in the main database. Otherwise select WC-Imported.sqlite, previously created by Database > Import Database from the old backup's DBF/FPT folder. Do not select wc.sqlite as its own source.
+5. Wait for the load. A pre-load database backup is created automatically in Data/maintenance-backups. Every legacy row and field is copied; initial field values/deleted markers are verified to match. No legacy record is skipped.
+6. The complete workspace opens automatically on subsequent application launches. The installer does not contain actual records; actual records are loaded locally by this step.
+
+WHERE THE RECORDS ARE
+The shared database remains C:\ProgramData\PikeCountyWC-ServerEvaluation\Data\wc.sqlite.
+Use the table selector in Complete Legacy Workspace:
+ WC_CASE: every case and all original fields/balances.
+ WC_DEF: defendant identities, contact details, descriptions and memo history.
+ WC_MERCH: complete merchant directory, original merchant IDs and contact fields.
+ PAYMENTS: all original payment rows, dates, receipt numbers, allocations and other fields.
+ WC_ADJ: original adjustment records.
+ ALIAS, BANKCODE, WC_CODE, AZIPS: aliases, banks, WC codes, ZIP directory.
+ All remaining backup tables are also retained. Legacy security/system tables are shown to application Administrators only and do not replace the new application accounts.
+Search all fields, page with Previous/Next, and scroll horizontally. Include deleted shows original deleted/archive markers. Blank, duplicate and malformed records remain visible; no record is silently discarded. Legacy dates display as YYYYMMDD. Text memos resolve from preserved memo files; damaged/binary memos remain preserved rather than guessed.
+
+EDITING AND HISTORY
+Double-click any row or choose View / correct all fields. The field tabs contain every original field. The Original / change history tab shows the original backup values and subsequent changes.
+An Administrator must supply a reason to save corrections or change a deleted marker. Original rows are never overwritten. The change log records before/after values, user and timestamp. Another RDP user's stale edit is rejected; reopen the record and try again.
+New record adds a typed legacy record with an audit entry. New cases require CASE_NO/DEFENDANT/MERCHANT; defendants and merchants require their legacy IDs and names. Enter the required charge/balance fields explicitly; no unverified fee schedule is inferred. Binary fields are retained, not edited as arbitrary text. Original invalid values are preserved unless a supported replacement is entered.
+
+PAYMENTS
+Select a WC_CASE row, then Case payment history. Matching uses the original case number, including deleted payment rows. Duplicate case numbers can share the same history; the program does not claim they represent one unique case. Double-click a payment for every field and audited corrections.
+Record test payment posts allocations for REST_PAID, SFEE_PAID, FO_PAID and WD_PAID against CK_DUE, FEE_DUE, DA_DUE and WD_DUE. It updates those cumulative paid fields and AMT_PAID if present, in the same SQLite transaction as the new payment. The receipt must be unused in retained history and fit the original 7-character field. Full application actor identity is recorded; the legacy initials field retains its 2-character width. New payments respect closed accounting periods.
+Negative/invalid amounts, over-allocation, stale revisions and duplicate/blank case identities block posting. Existing balances are not reconstructed from incomplete history.
+Administrator corrections to the four supported payment allocations, case-number reassignment, and payment void/restore markers update the uniquely linked case balances atomically. Missing/ambiguous links or a correction that would create a negative balance block the entire correction. Resolve the case identity/balance first; do not guess. Other field edits and raw adjustment-table edits are saved as entered, not automatically interpreted as fund distributions. Changes to court-cost, court-restitution, overpayment, historical adjustment or other specialized fields require explicit financial review/case reconciliation.
+Print payment creates a Letter-size test copy of every field in the selected payment record. Posting a new payment opens a test receipt with the original posting snapshot. These are test printouts, not verified reproductions of the old official receipt layout.
+
+RECONCILIATION
+Reconciliation shows record counts, original and current active-payment allocation totals, duplicate case-number groups, payments lacking a unique active case, and correction counts. Original totals remain fixed; working totals reflect test corrections and new test payments.
+The supplied backup contains 9,076 active payments without exactly one active matching case; 1,115 active case-number groups have duplicates (including any repeated blank identities). These source exceptions remain unresolved and fully preserved. Do not resolve them by matching names automatically.
+
+SEPARATE FROM EARLIER SAMPLE SCREENS
+The earlier Cases / Payments, Defendant Information and Reports / Month-End sample screens and rc3 snapshot are separate from the complete legacy workspace. They do not mirror or report on all working legacy data. Earlier rc3 test edits are not automatically merged into the full workspace; it starts from the preserved original backup. Use the complete workspace for legacy testing and its Reconciliation/Print payment functions. Existing sample/rc3 data is not deleted.
+
+ACCEPTANCE STILL REQUIRED
+Official fund distribution and deposit processes, specialized legal forms, all old application business rules/report layouts, orphan/duplicate reconciliation, real Server 2022 simultaneous RDP sessions, printer behavior, elevated installer ACL/group setup and production security/backup recovery need acceptance testing. This candidate must not replace the live system for official collections yet. Keep the original backup intact.
+
+VALIDATION
+All 147,541 physical source records initially matched exactly, including 24,842 payment rows, 42,607 cases, 13,497 defendant rows and 1,471 merchants. No rows were skipped. All 65 preserved source files matched their original SHA-256 after correction/payment tests.
+Passed: 43 existing application tests; seven full-backup integrity/transaction tests (exact initial values, repeat-load prevention, preserved originals, cross-connection stale edits, payment posting/duplicate receipt rollback, allocation correction/void/restore, memos/deleted markers and database constraints); fictional UI checks of grid/editor/new-record/history forms; installer extraction and 10 bundled executable checks. Build host: Windows 11 x64, not actual Windows Server 2022. Installer unsigned.

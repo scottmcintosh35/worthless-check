@@ -1,0 +1,29 @@
+STARTUP FIX - VERSION 1.0.0-rc2
+
+The previous deployment could withdraw its first Administrator setup or login
+window because that window was marked transient to a hidden root window. The
+program could then remain running invisibly and hold the database startup lock.
+Another launch would time out with "Another user is initializing this database."
+
+This version keeps startup setup/login windows visible and adds bundled checks
+that verify the windows are viewable before interacting with them. It also
+verifies startup-lock exclusion and release, and reports the actual startup
+exception in the error dialog instead of a generic permissions suggestion.
+
+INSTALL THIS FIX
+1. Have everyone close the application on the server.
+2. In Task Manager > Details, end any PikeCountyWC.exe process left running from
+   the earlier failed launch. Do this only after all staff have closed their
+   application windows. The old hidden process must exit to release its lock.
+3. Run WC-Server2022-Setup-rc2.exe as the server Administrator, using the same
+   installation folder. There is no need to uninstall first.
+4. Launch the application once. The first Administrator form (or login form if
+   already configured) should now appear. Complete it before another staff member
+   opens the application for the first time.
+
+Do not delete wc.sqlite, its -wal/-shm files, or the data directory. Existing data,
+users and Windows group settings are retained. Deleting the .lock file is not
+needed; Windows releases the file lock when the old process exits.
+
+System > About should show Server Deployment Candidate 1.0.0-rc2.
+All earlier evaluation limits and Server 2022 acceptance requirements remain.

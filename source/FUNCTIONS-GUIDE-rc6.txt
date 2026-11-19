@@ -1,0 +1,110 @@
+PIKE COUNTY WORTHLESS CHECK UNIT - FUNCTIONS SECTIONS UPDATE rc6
+
+INSTALL AND OPEN
+Close the application in every RDP session and install WC-Server2022-Setup-rc6.exe as Administrator over rc5. Existing main data, logins, complete legacy records, reconciliation links and saved corrections are retained. No re-import is needed if Complete Legacy Workspace is already loaded.
+Functions now contains the screenshot sections on the main application and Complete Legacy Workspace windows. Earlier sample-data actions are grouped under Earlier sample data tools. The new sections use working legacy data, not the old sample case screens.
+
+BASIC REPORT WORKFLOW
+Choose the Functions section. For batch reports choose From / To dates (YYYY-MM-DD) and an optional search, then click Create saved preview. The initial period is the current month through today; clear BOTH dates for all history. Use date ranges on large databases. The UI never sends mail or initiates a bank transaction.
+Each created preview is saved as a frozen batch. Review source row numbers, criteria, totals and warnings. Print / Save PDF opens a Letter-size HTML preview. Export text saves a readable copy. Saved batches / reprints lists the latest 500 batches across categories; double-click a batch to reopen the exact saved values and wording. Reprint actions open the last batch for that category. Record/template changes affect new batches, not frozen ones.
+Cases/recipient profiles, register rows and check drafts changed after a preview prevent posting. Generate a new batch if the save is stale. Posting requires an application Administrator, a reason and confirmation. Duplicate test posting is rejected atomically.
+
+PRINT REPORTS
+Worthless Check Entry Proof: select active cases not marked PROOF. Post New Entries marks PROOF in the editable working cases and records a batch event; preserved original cases are unchanged.
+Letter to Defendant: select one exact WC_CASE source row before choosing a single letter. Batch letters select active cases with a blank LTR_SENT date. Letters by Merchant filters MERCHANT / MERCH_ID, not unrelated names. Second/final stages use their own blank LTR_SENT2/LTR_SENT3 fields. Posting sets only the corresponding working letter date. Existing historic sent dates remain visible; no legal deadline or eligibility is inferred.
+Mail and mailing-label preparation require a unique DEF_ID to WC_DEF.ID match and a nonblank postal address. The preview identifies a blocking source row when the recipient is missing/ambiguous; correct that record or narrow the selection. No person is chosen by a matching name alone.
+Label reprints from a letter batch use its saved recipient addresses, not an address changed later.
+Surrender list uses DUE_DATE. Investigator lists use the working VISIT marker and can sort by defendant or state/city. Active warrants and marked recalls use ACT_WARR and RECALLED respectively. No warrant is issued or transmitted.
+Merchant/defendant histories show selected working cases and associated payment history. Explicit reconciliation links take priority; unresolved case-number matches remain labeled as potentially ambiguous. Deleted payment rows are included in history and carry their deleted marker. Normal financial/date reports include active rows only. Original/deleted case data remains available in Complete Legacy Workspace.
+Defendant notes resolve preserved text memos. Merchant/defendant listings use the full working directories.
+Postal verification, restitution agreement/form, forgery affidavit and complaint are editable DRAFT form previews. Legacy wording excerpts come from the saved FRX expression inventory, with selected case/profile fields merged separately. FoxPro code is never executed. These are not verified replicas of original layouts and are not approved legal documents. Old wording can contain obsolete names, addresses, dates or provisions; the office must review and replace it before official use.
+
+MODIFY REPORTS AND LABELS
+Modify Reports opens the template editor. For letters and labels, use plain uppercase field placeholders such as {DEFENDANT}, {CASE_NO}, {ADDRESS}, {CITY}, {STATE}, {ZIP}. For tabular report headings use {REPORT_TITLE}, {START_DATE}, {END_DATE}, {RECORD_COUNT}, {TOTALS}. Unsafe expressions and unknown fields are rejected. Administrator changes require a reason and reject stale revisions.
+Modify Labels has separate Folder Labels and Any Label entries. Label text, columns/rows, dimensions, margins, gap and font can be changed. Values must fit Letter paper. Default mailing layout is three columns by ten rows. Saved batches capture their layout for exact reprinting. Test alignment on plain paper first.
+
+DAILY REGISTER REPORTS
+Print Receipt List prepares active receipts in the selected date range not already posted in this NEW test workflow. Original posting flags are not interpreted as proof of new test posting; review historical dates before posting old receipts. Payments by Date Range includes the active date-range history for review regardless of new test posting membership. Re-Print Receipt uses the selected PAYMENTS source row.
+Post Receipts for Deposit records a frozen reviewed receipt batch and test deposit-workflow membership. It does NOT create a bank deposit, change payment allocations, overwrite the original DEPOSIT table or assert that a bank deposit balanced. View Last Receipt List and saved batches retain the evidence for this test workflow.
+
+MONTH-END PROCESS
+Create/Print Detailed Check Register is a review of active payment allocations for the selected period. View/Edit Detailed Check Register Data opens the working legacy REGISTER table for audited record editing. Frozen reports are never edited in place; correct the relevant working source and generate a new preview. The retained REGISTER/CHECKS1/CHECKS2/DEPOSIT/FUNDS tables are not silently regenerated from incomplete historical rules.
+Print Merchant Checks and Print DA/Commission Checks open the draft-check manager, filtered by category. Enter verified payee, draft number, date, amount, source case/receipt references and supporting allocation evidence. No percentage or fund split is inferred. The draft amount is explicit; it is not automatically taken from a due balance. A positive amount and evidence/reason are required. Numbers already in any retained legacy check register are rejected.
+Print reviewed draft batch produces non-negotiable check drafts for the selected category/date range. Re-Print Checks reopens a saved check print batch. These drafts contain no bank routing/MICR setup and cannot be used as approved negotiable checks.
+Print 1 Check (single Def.) opens a defendant-refund draft with the selected case reference. Print 1 Check (all Def.) collects working case references sharing the selected original DEF_ID; staff must verify those references and enter the amount. No identity or refund amount is inferred from the name alone. Append New Check to Register adds a reviewed draft.
+Print Final Check Register freezes the unposted draft checks in the selected period. View/Edit Final Check Register edits only unposted drafts with revision checks. Post Check Registers records the reviewed drafts as posted in the TEST register and prevents repeat posting/editing. It does not mark historical payments distributed, reduce case balances, issue bank payments or implement official DA/commission distribution. Posted check snapshots and audit history remain available.
+Print Deposit Register reads the preserved working DEPOSIT records; View Deposit Register opens them for audited editing. Print Daily Activity/Monthly Totals groups payment allocation totals and working check-entry counts/amounts by month. Invalid entry amounts are counted explicitly rather than silently included as valid totals. Edit DA/Commission Fund File opens the working FUNDS records; its source schema contains payee/address data, not verified fund-distribution rules.
+
+CHECK ANALYSIS / MONTHLY ACTIVITY
+Choose a year, Current Month or Payments by Date Range. Year options include years actually present in the payment data and the current year; Other year allows a specific year. Monthly Activity reports active payment allocation totals by month and check-entry activity. Invalid payment money values block financial totals until corrected. Missing/invalid dates excluded by a date filter are reported; blank dates permit review of all history.
+
+LIMITATIONS / ACCEPTANCE
+All functions remain test workflows. Original backup/source bytes are preserved. Specialized legal layouts, official posting semantics, cash/deposit reconciliation and bank-check printing/fund distributions still require office verification and acceptance. These new menus do not make the application production-final. Actual Server 2022/RDP, elevated installer ACL/group setup and printer acceptance remain outstanding. Installer unsigned; no actual case data is packaged.
+
+MENU INVENTORY
+Functions > Edit Case [case.edit]
+Functions > Add New Case [case.new]
+Functions > Print Reports > Worthless Check Entry Proof > Create/Print New Entry Proof List [proof.create]
+Functions > Print Reports > Worthless Check Entry Proof > Post New Entries [proof.post]
+Functions > Print Reports > Worthless Check Entry Proof > View Current List [proof.view]
+Functions > Print Reports > Worthless Check Entry Proof > Re-Print Current List [proof.reprint]
+Functions > Print Reports > Letter to Defendant [letter1.single]
+Functions > Print Reports > Batch Print of Defendant Letters > All Unprinted Letters [letter1.create]
+Functions > Print Reports > Batch Print of Defendant Letters > Letters by Merchant [letter1.merchant]
+Functions > Print Reports > Batch Print of Defendant Letters > View Last List of Letters [letter1.view]
+Functions > Print Reports > Batch Print of Defendant Letters > Post Defendant Letters [letter1.post]
+Functions > Print Reports > Batch Print of Defendant Letters > Reprint Labels [labels.letter1]
+Functions > Print Reports > Defendant Labels by Enter Date [labels.create]
+Functions > Print Reports > Print Second & Final Letters > Print 2nd Letters [letter2.create]
+Functions > Print Reports > Print Second & Final Letters > View Last List Created [letter2.view]
+Functions > Print Reports > Print Second & Final Letters > Print Single Second to Defendant [letter2.single]
+Functions > Print Reports > Print Second & Final Letters > Post 2nd Letters [letter2.post]
+Functions > Print Reports > Print Second & Final Letters > Reprint Labels (2nd) [labels.letter2]
+Functions > Print Reports > Print Second & Final Letters > Print Final Letters [letter3.create]
+Functions > Print Reports > Print Second & Final Letters > Post Final Letters [letter3.post]
+Functions > Print Reports > Print Second & Final Letters > Reprint Labels (Final) [labels.letter3]
+Functions > Print Reports > Surrender List [surrender.create]
+Functions > Print Reports > Investigator Visit List > Defendant Order [visit.create]
+Functions > Print Reports > Investigator Visit List > Ordered by City & State [visit.city]
+Functions > Print Reports > Investigator Visit List > Reprint Visit List [visit.reprint]
+Functions > Print Reports > Active Warrant List [warrant.create]
+Functions > Print Reports > Merchant History [merchant_history.create]
+Functions > Print Reports > Defendant History [defendant_history.create]
+Functions > Print Reports > Defendant Notes [notes.create]
+Functions > Print Reports > Merchant Listing [merchants.create]
+Functions > Print Reports > Defendant Listing [defendants.create]
+Functions > Print Reports > Print Marked Recalls [recalls.create]
+Functions > Print Reports > Postal Verification [postal.single]
+Functions > Print Reports > Restitution Agreement [restitution_agreement.single]
+Functions > Print Reports > Restitution Form [restitution_form.single]
+Functions > Print Reports > Forgery Affidavit [forgery.single]
+Functions > Print Reports > Complaint [complaint.single]
+Functions > Modify Reports [templates.edit]
+Functions > Daily Register Reports > Print Receipt List [receipts.create]
+Functions > Daily Register Reports > Post Receipts for Deposit [receipts.post]
+Functions > Daily Register Reports > View Last Receipt List [receipts.view]
+Functions > Daily Register Reports > Re-Print Receipt [receipt.single]
+Functions > Daily Register Reports > Print Receipts by Date Range [receipts.range]
+Functions > Month-End Process > Create/Print Detailed Check Register [detailed.create]
+Functions > Month-End Process > View/Edit Detailed Check Register Data [data.REGISTER]
+Functions > Month-End Process > Re-Print Detailed Register [detailed.reprint]
+Functions > Month-End Process > Print Merchant Checks [checks.merchant]
+Functions > Month-End Process > Print DA/Commission Checks [checks.fund]
+Functions > Month-End Process > Re-Print Checks [checks.reprint]
+Functions > Month-End Process > Print Final Check Register [final.create]
+Functions > Month-End Process > View/Edit Final Check Register [checks.edit]
+Functions > Month-End Process > Print 1 Check (single Def.) [checks.single]
+Functions > Month-End Process > Print 1 Check (all Def.) [checks.defendant]
+Functions > Month-End Process > Append New Check to Register [checks.append]
+Functions > Month-End Process > Post Check Registers [final.post]
+Functions > Month-End Process > Print Deposit Register [deposits.create]
+Functions > Month-End Process > View Deposit Register [data.DEPOSIT]
+Functions > Month-End Process > Print Daily Activity/Monthly Totals [monthly.create]
+Functions > Month-End Process > Edit DA/Commission Fund File [data.FUNDS]
+Functions > Check Analysis Report > Year [analysis.year]
+Functions > Check Analysis Report > Current Month [analysis.month]
+Functions > Check Analysis Report > Payments by Date Range [analysis.range]
+Functions > Monthly Activity Report [monthly.create]
+Functions > Print Defendant Labels [labels.create]
+Functions > Modify Labels > Folder Labels [templates.folder_labels]
+Functions > Modify Labels > Any Label [templates.labels]
