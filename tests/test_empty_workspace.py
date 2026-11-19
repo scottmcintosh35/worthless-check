@@ -40,7 +40,7 @@ class EmptyWorkspaceTests(unittest.TestCase):
                 self.assertEqual(len(bundle.namelist()), 5)
                 self.assertFalse(any(n.endswith(('-wal', '-shm', '-journal'))
                                      for n in bundle.namelist()))
-                launcher = bundle.read('Start-rc65-Empty-Workspace.ps1').decode('utf-8-sig')
+                launcher = bundle.read('Start-rc66-Empty-Workspace.ps1').decode('utf-8-sig')
                 self.assertNotIn('__EMPTY_SHA256__', launcher)
                 self.assertNotIn('__INSTALLER_SHA256__', launcher)
                 self.assertIn(builder.sha256(installer), launcher)

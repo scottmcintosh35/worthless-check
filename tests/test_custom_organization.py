@@ -28,7 +28,7 @@ with tempfile.TemporaryDirectory(ignore_cleanup_errors=True) as tmp:
   with patch('users.messagebox.showinfo'),patch('users.messagebox.showerror') as err:form.save();assert not err.called
   assert users.document_heading(db)=='Sample & Co.\nCommunity Collections\nNorth Region\nAccounts Office'
   assert [x.cget('text') for x in app.office_heading.winfo_children()]==users.document_heading(db).splitlines()
-  assert 'North Desk | Worthless Check | 1.0.0-rc65' in root.title()
+  assert 'North Desk | Worthless Check | 1.0.0-rc66' in root.title()
   saved=users.get_settings(db);assert saved['COUNTY']==old['COUNTY'] and saved['CIRCUIT']=='Twelfth' and saved['DA_FEE']=='155.00' and saved['RECEIPT_START']=='12345'
   payload={'kind':'receipts','title':'Register','columns':[],'items':[],'totals':{}}
   html=legacy_functions.print_html(payload,Path(tmp)/sub/'reports',users.document_heading(db)).read_text()
