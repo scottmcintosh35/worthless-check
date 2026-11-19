@@ -47,6 +47,20 @@ The `.gitignore` excludes runtime databases, legacy files, exports, archives, cr
 
 Keep this repository **private**. Use fictional fixtures in development. Do not commit real case details, receipt exports, source backups, authentication data, internal recovery manifests or encryption keys. Review third-party notices and ownership before changing visibility or licensing. No top-level distribution license is asserted by this preparation.
 
-Local `tools/` and `evidence/` from the source ZIP remain available on disk but are intentionally ignored because they contain deployment-specific information. No GitHub remote is configured and no commit/push has been performed by the preparation.
+Local `tools/` and `evidence/` from the source ZIP remain available on disk but are intentionally ignored because they contain deployment-specific information.
 
 Production deployment remains a separately authorized operation. The three pending Troy receipt pairs remain pending; source control preparation does not authorize reconciliation or live changes.
+
+## Saving future changes
+
+This project tracks `main` in the private GitHub repository. Before starting new work, run `git pull --ff-only` with a clean working folder. After editing, review the changes and stage only the intended files:
+
+```powershell
+git diff
+git add README.md
+git diff --cached
+git commit -m "Update project documentation"
+git push
+```
+
+Use the actual changed file paths when saving code changes. A push updates source control only; it does not install or deploy the application.
